@@ -172,14 +172,10 @@
   .hero-meta {
     margin-top: 36px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px 30px;
+    flex-direction: column;
+    gap: 6px;
     font-size: .92rem;
     color: #d8c8ab;
-  }
-  .hero-meta span { position: relative; }
-  .hero-meta span + span::before {
-    content: "•"; position: absolute; left: -17px; color: var(--gold);
   }
   .hero-meta b { color: #fff; font-weight: 600; }
 
@@ -268,6 +264,9 @@
   .section-head p { color: var(--ink-soft); font-size: 1.06rem; margin: 0; }
 
   .lead { font-size: 1.12rem; color: var(--ink-soft); }
+
+  /* Body copy across content sections shares one soft, readable color */
+  [data-cms-paras] p { color: var(--ink-soft); }
 
   /* grid helpers */
   .grid { display: grid; gap: 26px; }
@@ -393,8 +392,6 @@
 
   /* Compact carousel (sits within section content, left-aligned) */
   .carousel.compact { max-width: 360px; margin-left: 0; margin-right: 0; }
-  /* Wider carousel variant */
-  .carousel.wide { max-width: 720px; margin-left: 0; margin-right: 0; }
   /* Media + text split that keeps a constrained media column, stacks on small screens */
   .grid.media-split { grid-template-columns: minmax(0, 440px) 1fr; align-items: center; }
   @media (max-width: 760px) { .grid.media-split { grid-template-columns: 1fr; } }
@@ -539,7 +536,6 @@
   .gallery figcaption { padding: 11px 15px; font-size: .85rem; color: var(--ink-soft); background: var(--paper); }
 
   /* ---------- Facebook follow row ---------- */
-  .fb-head { margin: 44px 0 16px; }
   .fb-embed { max-width: 500px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; padding: 14px; }
   .fb-embed iframe { width: 100%; max-width: 500px; height: 600px; border: 0; display: block; }
 
@@ -575,7 +571,7 @@
         <b>St Nicholas</b>
         <span>Orthodox Church</span>
       </span>
-      <img class="brand-icon" src="assets/st-nicholas-icon-2.png" alt="" aria-hidden="true" />
+      <img class="brand-icon" src="assets/st-nicholas-icon-1.jpg" alt="" aria-hidden="true" />
     </a>
     <nav class="menu" id="primary-menu" aria-label="Primary" data-cms-nav>
       <a href="#about">Parish</a>
@@ -611,8 +607,8 @@
         </div>
         <div class="hero-meta" data-cms-meta>
           <span><b>Established 1914</b> &middot; McKees Rocks, PA</span>
-          <span>Sunday Divine Liturgy <b>10:00 am</b></span>
           <span>Saturday Great Vespers <b>5:00 pm</b></span>
+          <span>Sunday Divine Liturgy <b>10:00 am</b></span>
         </div>
       </div>
       <div class="hero-collage">
@@ -625,7 +621,7 @@
                alt="The faithful of St Nicholas processing by candlelight around the church at night." />
         </figure>
         <figure class="hc-icon">
-          <img src="assets/st-nicholas-icon-2.png" loading="lazy"
+          <img src="assets/st-nicholas-icon-1.jpg" loading="lazy"
                alt="Icon of St Nicholas the Wonderworker, Archbishop of Myra." />
         </figure>
       </div>
@@ -648,8 +644,8 @@
       </div>
       <div class="hero-meta" data-cms-meta>
         <span><b>Established 1914</b> &middot; McKees Rocks, PA</span>
-        <span>Sunday Divine Liturgy <b>10:00 am</b></span>
         <span>Saturday Great Vespers <b>5:00 pm</b></span>
+        <span>Sunday Divine Liturgy <b>10:00 am</b></span>
       </div>
     </div>
   </div>
@@ -661,17 +657,18 @@
     <div class="section-head">
       <p class="eyebrow" data-cms="about.eyebrow">Parish</p>
       <h2 data-cms="about.heading">We're a diverse people!</h2>
-      <figure class="photo-figure" style="margin:0 0 24px">
-        <img src="assets/parish-group.jpg" width="960" height="430" loading="lazy" data-cms-src="about.panoImage" data-cms-alt="about.panoAlt"
-             alt="The parish family of St Nicholas Orthodox Church gathered together before the iconostasis." />
-      </figure>
       <p data-cms="about.intro">Our parish is made of people of many ages, backgrounds, and cultures that hold these things in common: love for God and love for each other. We are a parish for every person who is seeking to grow in Christ. Whether you have been Orthodox all of your life, you're new to the faith, or you're just seeking stability and truth, you have a home at St Nicholas.</p>
     </div>
+
+    <figure class="photo-figure">
+      <img src="assets/parish-group.jpg" width="960" height="430" loading="lazy" data-cms-src="about.panoImage" data-cms-alt="about.panoAlt"
+           alt="The parish family of St Nicholas Orthodox Church gathered together before the iconostasis." />
+    </figure>
 
     <div class="about-body">
       <figure class="icon-figure icon-float">
         <div class="icon-frame">
-          <img src="assets/st-nicholas-icon-2.png" data-cms-src="about.iconImage"
+          <img src="assets/st-nicholas-icon-1.jpg" data-cms-src="about.iconImage"
                loading="lazy"
                alt="Icon of St Nicholas the Wonderworker, Archbishop of Myra." />
         </div>
@@ -785,7 +782,7 @@
     </div>
 
     <div class="card" style="margin:36px auto 0;max-width:820px;text-align:center;background:#fff">
-      <h3 style="margin-bottom:.3em" data-cms="faith.joinHeading">Join in!</h3>
+      <h3 style="margin-bottom:.3em" data-cms="faith.joinHeading">Join us!</h3>
       <p style="max-width:760px;margin:0 auto 1.3rem;color:var(--ink-soft)" data-cms="faith.joinPara">We want you to feel welcomed during our services. While Orthodox worship may seem somewhat unfamiliar, we believe fully and without reservation that Orthodox worship is the way worship is supposed to look like. This is worship as it was always meant to be. Discovering it for the first time has been an overwhelming sense of joy for people around the world, and we hope you'll come to discover that too.</p>
       <a class="btn" href="#contact" data-cms="faith.joinButtonLabel" data-cms-href="faith.joinButtonHref">Plan Your Visit &amp; Directions</a>
     </div>
@@ -823,7 +820,6 @@
       <div class="card">
         <h3 data-cms="schedule.educationHeading">Our regular educational offering times are:</h3>
         <div class="schedule" data-cms-list="scheduleEducation">
-          <div class="srow"><div class="name">Sunday Morning Adult Education on first and third Sundays</div><div class="time">9:15 am</div></div>
           <div class="srow"><div class="name">Sunday Church School at the end of Divine Liturgy</div><div class="time">&mdash;</div></div>
           <div class="srow"><div class="name">Bible Study on second and fourth Wednesdays</div><div class="time">7:00 pm</div></div>
         </div>
@@ -865,7 +861,7 @@
       </div>
     </div>
     <p style="margin-top:26px;margin-bottom:0">
-      <a class="btn ghost" href="https://orthodoxpittsburgh.org/parishcalendar.html" target="_blank" rel="noopener" data-cms="calendar.fullButtonLabel" data-cms-href="calendar.fullButtonHref">Open Full Calendar</a>
+      <a class="btn ghost" href="https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York" target="_blank" rel="noopener" data-cms="calendar.fullButtonLabel" data-cms-href="calendar.fullButtonHref">Open Full Calendar</a>
     </p>
   </div>
 </section>
@@ -886,11 +882,6 @@
       <h2 data-cms="gallery.heading">Come and see</h2>
       <p data-cms="gallery.intro">From the Divine Liturgy to fellowship, festivals, and service to our neighbors &mdash; a glimpse of the people of St Nicholas. Many more photos, including images from our parish history, live on our Facebook page.</p>
     </div>
-
-    <figure class="photo-figure">
-      <img src="assets/parish-group.jpg" width="960" height="430" loading="lazy" data-cms-src="gallery.panoImage" data-cms-alt="gallery.panoAlt"
-           alt="The parish family of St Nicholas gathered before the iconostasis with their archbishop." />
-    </figure>
 
     <div class="gallery" data-cms-gallery="gallery.images">
       <figure>
@@ -949,9 +940,6 @@
       </figure>
     </div>
 
-    <div class="fb-head">
-      <a class="btn" href="https://www.facebook.com/OrthodoxPittsburgh/photos" target="_blank" rel="noopener" data-cms="gallery.fbButtonLabel" data-cms-href="gallery.fbButtonHref">Browse More Photos on Facebook</a>
-    </div>
     <div class="fb-embed">
       <iframe
         title="St Nicholas Orthodox Church on Facebook"
@@ -966,7 +954,7 @@
 </section>
 
 <!-- ====================== CLERGY / LEADERSHIP ====================== -->
-<section id="clergy">
+<section class="alt" id="clergy">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Our Leadership</p>
@@ -1021,7 +1009,7 @@
 </section>
 
 <!-- ====================== HISTORY ====================== -->
-<section class="alt" id="history">
+<section id="history">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-cms="history.eyebrow">Our History</p>
@@ -1037,8 +1025,8 @@
     </div>
 
     <div class="grid two">
-      <div data-cms-paras="history.colLeft" data-cms-lead>
-        <p class="lead">Our parish has a long and rich history, having been established in 1914 by Slavic immigrants who lived in the area.</p>
+      <div data-cms-paras="history.colLeft">
+        <p>Our parish has a long and rich history, having been established in 1914 by Slavic immigrants who lived in the area.</p>
         <p>By 1913, numerous families in McKees Rocks were traveling by boat every Sunday to attend the only Orthodox church available to them, on the other side of the Ohio River! But their dedication to God and their industrious ways led them to build a beautiful church to the glory of God. Our current building was dedicated in 1917.</p>
         <p>St Nicholas welcomed many new families, especially during the great immigration in the 1920's and 1930's, who had made the arduous journey from Europe to their new home in America. Much of Pittsburgh's then flourishing industry was built on the hard work and dedication of these people.</p>
       </div>
@@ -1051,21 +1039,21 @@
 </section>
 
 <!-- ====================== GIVING ====================== -->
-<section id="giving">
+<section class="alt" id="giving">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow" data-cms="giving.eyebrow">Support &amp; Stewardship</p>
       <h2 data-cms="giving.heading">Giving</h2>
-      <p data-cms="giving.intro">Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href="https://orthodoxpittsburgh.org/domerestoration" target="_blank" rel="noopener">click here</a>.</p>
-    </div>
-    <div class="give-actions">
-      <a class="btn" href="https://donate.stripe.com/4gw16p9ZT99C0tGaEE" target="_blank" rel="noopener" data-cms="giving.oneTimeLabel" data-cms-href="giving.oneTimeHref">One-Time Donation</a>
-      <a class="btn ghost" href="https://orthodoxpittsburgh.churchtrac.com/give" target="_blank" rel="noopener" data-cms="giving.recurringLabel" data-cms-href="giving.recurringHref">Recurring Donation</a>
+      <div class="give-actions">
+        <a class="btn" href="https://donate.stripe.com/4gw16p9ZT99C0tGaEE" target="_blank" rel="noopener" data-cms="giving.oneTimeLabel" data-cms-href="giving.oneTimeHref">One-Time Donation</a>
+        <a class="btn ghost" href="https://orthodoxpittsburgh.churchtrac.com/give" target="_blank" rel="noopener" data-cms="giving.recurringLabel" data-cms-href="giving.recurringHref">Recurring Donation</a>
+      </div>
+      <p data-cms="giving.intro">Please use one of the links above to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href="https://orthodoxpittsburgh.org/domerestoration" target="_blank" rel="noopener">click here</a>.</p>
     </div>
     <h3 style="font-size:1.5rem;margin-bottom:.4em" data-cms="giving.stewardshipHeading">Stewardship at St Nicholas</h3>
-    <div data-cms-paras="giving.stewardshipParas" data-cms-paras-style="color:var(--ink-soft)">
-      <p style="color:var(--ink-soft)"><em>&ldquo;He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. So let each one give as he purposes in his heart, not grudgingly or of necessity; for God loves a cheerful giver.&rdquo;</em> (<a href="https://www.blueletterbible.org/esv/2co/9/6/" target="_blank" rel="noopener">2 Cor 9:6&ndash;7</a>)</p>
-      <p style="color:var(--ink-soft);margin-bottom:0">Parishioners at St Nicholas are encouraged to be good stewards of the time, talent, and treasure God has bestowed on them. This stewardship involves acknowledging that &ldquo;every good gift and every perfect gift is from above, and comes down from the Father of lights,&rdquo; (<a href="https://www.blueletterbible.org/esv/jas/1/17/" target="_blank" rel="noopener">James 1:17</a>) and then taking a first portion of those gifts to offer them back to God in thanksgiving. In November of each year, parishioners are encouraged to plan out their offerings for the following year so that the parish can continue the work in the community which God has planted in our midst.</p>
+    <div data-cms-paras="giving.stewardshipParas">
+      <p><em>&ldquo;He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. So let each one give as he purposes in his heart, not grudgingly or of necessity; for God loves a cheerful giver.&rdquo;</em> (<a href="https://www.blueletterbible.org/esv/2co/9/6/" target="_blank" rel="noopener">2 Cor 9:6&ndash;7</a>)</p>
+      <p style="margin-bottom:0">Parishioners at St Nicholas are encouraged to be good stewards of the time, talent, and treasure God has bestowed on them. This stewardship involves acknowledging that &ldquo;every good gift and every perfect gift is from above, and comes down from the Father of lights,&rdquo; (<a href="https://www.blueletterbible.org/esv/jas/1/17/" target="_blank" rel="noopener">James 1:17</a>) and then taking a first portion of those gifts to offer them back to God in thanksgiving. In November of each year, parishioners are encouraged to plan out their offerings for the following year so that the parish can continue the work in the community which God has planted in our midst.</p>
     </div>
   </div>
 </section>
@@ -1079,7 +1067,7 @@
       <p data-cms="visit.intro">Outlined below are the basic steps to become an Orthodox Christian. However, everyone's journey will look a bit different. Each step assumes that the inquirer has been in regular contact with Fr Thomas and that he has given you a blessing to move through each stage.</p>
     </div>
 
-    <div class="carousel wide" data-interval="5000" style="margin-bottom:36px">
+    <div class="carousel" data-interval="5000" style="max-width:680px;margin:0 auto 36px">
       <div class="cslides" data-cms-carousel="visit.images">
         <img src="assets/catechumens-1.jpg" loading="lazy" alt="Catechumens preparing for reception into the Orthodox Church at St Nicholas." />
         <img src="assets/baptism-4.jpg" loading="lazy" alt="The celebration of Holy Baptism at St Nicholas Orthodox Church." />
@@ -1125,7 +1113,7 @@
         <p>3. Once logged into your account, you will be able to access our Parish Application Form. You will be asked to provide your contact information, the Orthodox Church you were previously a member of, a list of community groups you may be interested in, and opportunities for service.</p>
         <p><em>We are looking forward to getting to know you!</em></p>
       </div>
-      <p style="margin-bottom:0">
+      <p style="margin-top:1.3rem;margin-bottom:0">
         <a class="btn" href="https://orthodoxpittsburgh.churchtrac.com/" target="_blank" rel="noopener" data-cms="visit.memberButtonLabel" data-cms-href="visit.memberButtonHref">Open ChurchConnect</a>
       </p>
     </div>
@@ -1241,6 +1229,9 @@
           <li>
             <div class="k">Address</div>
             <div class="v" data-cms="contact.address">St Nicholas Orthodox Church<br>320 Munson Avenue<br>McKees Rocks, PA 15136-2722</div>
+            <p style="margin:12px 0 0">
+              <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=320+Munson+Avenue,+McKees+Rocks,+PA+15136" target="_blank" rel="noopener" data-cms="contact.directionsButtonLabel" data-cms-href="contact.directionsButtonHref">Get Driving Directions</a>
+            </p>
           </li>
           <li>
             <div class="k">Phone</div>
@@ -1274,9 +1265,6 @@
             src="https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=p&z=18&output=embed">
           </iframe>
         </div>
-        <p style="margin-top:18px">
-          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=320+Munson+Avenue,+McKees+Rocks,+PA+15136" target="_blank" rel="noopener" data-cms="contact.directionsButtonLabel" data-cms-href="contact.directionsButtonHref">Get Driving Directions</a>
-        </p>
         <figure class="photo-figure" style="margin-top:18px;margin-bottom:0">
           <img src="assets/church-building.jpg" width="479" height="720" loading="lazy" data-cms-src="contact.photoImage" data-cms-alt="contact.photoAlt"
                alt="The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania." />
@@ -1367,6 +1355,15 @@
       if (!imgs.length || !slides) return;
 
       imgs[0].classList.add('active');
+
+      // Click the image (center, away from the arrows) to open it full-size in a new tab
+      slides.style.cursor = 'zoom-in';
+      slides.addEventListener('click', function () {
+        var cur = c.querySelector('.cslides img.active') || imgs[0];
+        var src = cur && cur.getAttribute('src');
+        if (src) window.open(src, '_blank', 'noopener');
+      });
+
       if (imgs.length < 2) return;
 
       var idx = 0, timer, btns;

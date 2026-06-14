@@ -194,8 +194,6 @@ collections:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Heading", name: heading, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
-              - { label: "Banner photo", name: panoImage, widget: image }
-              - { label: "Banner photo — description", name: panoAlt, widget: string }
               - label: "Gallery photos"
                 name: images
                 widget: list
@@ -204,8 +202,6 @@ collections:
                 fields:
                   - { label: "Photo", name: src, widget: image }
                   - { label: "Description", name: alt, widget: string }
-              - { label: "Facebook button — label", name: fbButtonLabel, widget: string }
-              - { label: "Facebook button — link", name: fbButtonHref, widget: string }
               - { label: "Facebook embed URL", name: fbEmbedSrc, widget: string }
 
           - label: "History Section"

@@ -1,12 +1,12 @@
 {
   "nav": [
     {
-      "label": "Worship",
-      "href": "#faith"
-    },
-    {
       "label": "Parish",
       "href": "#about"
+    },
+    {
+      "label": "Worship",
+      "href": "#faith"
     },
     {
       "label": "Services",
@@ -43,8 +43,8 @@
     "secondaryHref": "#faith",
     "meta": [
       "<b>Established 1914</b> &middot; McKees Rocks, PA",
-      "Sunday Divine Liturgy <b>10:00 am</b>",
-      "Saturday Great Vespers <b>5:00 pm</b>"
+      "Saturday Great Vespers <b>5:00 pm</b>",
+      "Sunday Divine Liturgy <b>10:00 am</b>"
     ],
     "collageVisible": true,
     "bannerVisible": true,
@@ -89,10 +89,6 @@
     }
   ],
   "scheduleEducation": [
-    {
-      "name": "Sunday Morning Adult Education on first and third Sundays",
-      "time": "9:15 am"
-    },
     {
       "name": "Sunday Church School at the end of Divine Liturgy",
       "time": "&mdash;"
@@ -156,7 +152,7 @@
       "While our parish has historical Russian and Slavic roots, you'll find that we fully embrace our mission here in America to bring the gospel to every nation, tribe, people, and language (<a href=\"https://www.blueletterbible.org/esv/rev/7/9/\" target=\"_blank\" rel=\"noopener\">Revelation 7:9</a>). English is our predominant language, but you'll hear numerous languages spoken by our parishioners and parish friends. Our parish is home to immigrants from Russia, Ukraine, Bulgaria, Romania, Japan, Germany, and other countries!",
       "We have members who have moved to the greater Pittsburgh area from every part of the country. We have a large population of members who have embraced the ancient Orthodox Christian faith from many spiritual backgrounds and journeys."
     ],
-    "iconImage": "assets/st-nicholas-icon-2.png",
+    "iconImage": "assets/st-nicholas-icon-1.jpg",
     "iconCaption": "Our patron, St Nicholas the Wonderworker, Archbishop of Myra.",
     "kidsImages": [
       { "src": "assets/kids-1.jpg", "alt": "Children of the parish at St Nicholas." },
@@ -240,7 +236,7 @@
         ]
       }
     ],
-    "joinHeading": "Join in!",
+    "joinHeading": "Join us!",
     "joinPara": "We want you to feel welcomed during our services. While Orthodox worship may seem somewhat unfamiliar, we believe fully and without reservation that Orthodox worship is the way worship is supposed to look like. This is worship as it was always meant to be. Discovering it for the first time has been an overwhelming sense of joy for people around the world, and we hope you'll come to discover that too.",
     "joinButtonLabel": "Plan Your Visit &amp; Directions",
     "joinButtonHref": "#contact"
@@ -262,7 +258,7 @@
     "agendaSrc": "https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff",
     "monthSrc": "https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff",
     "fullButtonLabel": "Open Full Calendar",
-    "fullButtonHref": "https://orthodoxpittsburgh.org/parishcalendar.html"
+    "fullButtonHref": "https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York"
   },
   "quote": {
     "text": "St. Nicholas Church will strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.",
@@ -272,8 +268,6 @@
     "eyebrow": "Parish Life",
     "heading": "Come and see",
     "intro": "From the Divine Liturgy to fellowship, festivals, and service to our neighbors &mdash; a glimpse of the people of St Nicholas. Many more photos, including images from our parish history, live on our Facebook page.",
-    "panoImage": "assets/parish-group.jpg",
-    "panoAlt": "The parish family of St Nicholas gathered before the iconostasis with their archbishop.",
     "images": [
       { "src": "assets/worship-4.jpg", "alt": "The faithful gathered for the Divine Liturgy at St Nicholas." },
       { "src": "assets/baptism-2.jpg", "alt": "A baptism celebrated at St Nicholas Orthodox Church." },
@@ -285,8 +279,6 @@
       { "src": "assets/food-1.jpg", "alt": "Preparing food together at a St Nicholas parish event." },
       { "src": "assets/fellowship-4.jpg", "alt": "The parish community sharing time together." }
     ],
-    "fbButtonLabel": "Browse More Photos on Facebook",
-    "fbButtonHref": "https://www.facebook.com/OrthodoxPittsburgh/photos",
     "fbEmbedSrc": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOrthodoxPittsburgh&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
   },
   "history": {
@@ -311,7 +303,7 @@
   "giving": {
     "eyebrow": "Support &amp; Stewardship",
     "heading": "Giving",
-    "intro": "Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href=\"https://orthodoxpittsburgh.org/domerestoration\" target=\"_blank\" rel=\"noopener\">click here</a>.",
+    "intro": "Please use one of the links above to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href=\"https://orthodoxpittsburgh.org/domerestoration\" target=\"_blank\" rel=\"noopener\">click here</a>.",
     "oneTimeLabel": "One-Time Donation",
     "oneTimeHref": "https://donate.stripe.com/4gw16p9ZT99C0tGaEE",
     "recurringLabel": "Recurring Donation",
