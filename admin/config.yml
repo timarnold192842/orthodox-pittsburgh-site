@@ -232,12 +232,6 @@ collections:
                 fields:
                   - { label: "Photo", name: src, widget: image }
                   - { label: "Description", name: alt, widget: string }
-              - label: "Slideshow caption paragraphs"
-                name: carouselParas
-                widget: list
-                field: { label: "Paragraph", name: text, widget: text }
-              - { label: "Facebook link — label", name: fbLabel, widget: string }
-              - { label: "Facebook link — URL", name: fbHref, widget: string }
 
           - label: "Giving Section"
             name: giving
@@ -247,9 +241,6 @@ collections:
               - { label: "Eyebrow", name: eyebrow, widget: string }
               - { label: "Heading", name: heading, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text, hint: "Basic HTML links are allowed." }
-              - { label: "Photo", name: panoImage, widget: image }
-              - { label: "Photo — description", name: panoAlt, widget: string }
-              - { label: "Photo caption", name: panoCaption, widget: string }
               - { label: "One-time button — label", name: oneTimeLabel, widget: string }
               - { label: "One-time button — link", name: oneTimeHref, widget: string }
               - { label: "Recurring button — label", name: recurringLabel, widget: string }
@@ -345,7 +336,6 @@ collections:
               - { label: "Directions button — link", name: directionsButtonHref, widget: string }
               - { label: "Church photo", name: photoImage, widget: image }
               - { label: "Church photo — description", name: photoAlt, widget: string }
-              - { label: "Church photo caption", name: photoCaption, widget: string }
 
           - label: "Footer"
             name: footer

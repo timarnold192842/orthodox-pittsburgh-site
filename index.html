@@ -27,7 +27,7 @@
 
   * { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
   body {
     margin: 0;
@@ -75,6 +75,7 @@
     border-bottom: 1px solid var(--line);
   }
   .nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +121,17 @@
   .btn.gold:hover { background: var(--gold-deep); color: #fff; }
   .nav-cta { display: flex; align-items: center; gap: 10px; }
   .nav-cta .btn { white-space: nowrap; }
-  .menu-toggle { display: none; }
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    width: 44px; height: 40px;
+    cursor: pointer;
+    align-items: center; justify-content: center;
+    color: var(--ink); flex: none;
+  }
+  .menu-toggle svg { width: 22px; height: 22px; display: block; }
 
   /* ---------- Hero (collage) ---------- */
   .hero {
@@ -237,6 +248,16 @@
   .icon-caption {
     margin-top: 14px;
     font-size: .76rem; color: var(--ink-soft); line-height: 1.55;
+  }
+  /* Icon floated within the body copy so paragraphs keep their normal rhythm */
+  .about-body::after { content: ""; display: table; clear: both; }
+  .icon-figure.icon-float {
+    float: right;
+    width: clamp(190px, 27vw, 260px);
+    margin: 4px 0 16px 32px;
+  }
+  @media (max-width: 680px) {
+    .icon-figure.icon-float { float: none; width: 100%; max-width: 300px; margin: 0 auto 22px; }
   }
 
   /* ---------- Sections ---------- */
@@ -372,6 +393,11 @@
 
   /* Compact carousel (sits within section content, left-aligned) */
   .carousel.compact { max-width: 360px; margin-left: 0; margin-right: 0; }
+  /* Wider carousel variant */
+  .carousel.wide { max-width: 720px; margin-left: 0; margin-right: 0; }
+  /* Media + text split that keeps a constrained media column, stacks on small screens */
+  .grid.media-split { grid-template-columns: minmax(0, 440px) 1fr; align-items: center; }
+  @media (max-width: 760px) { .grid.media-split { grid-template-columns: 1fr; } }
   /* Inline carousel (fixed height so it integrates beside adjacent text) */
   .carousel.inline .cslides { aspect-ratio: auto; height: clamp(260px, 26vw, 340px); }
   .give-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
@@ -458,7 +484,21 @@
     footer.site .cols { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 680px) {
-    nav.menu { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .nav-cta { display: none; }
+    nav.menu {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 4px 0;
+      max-height: 0; overflow: hidden; visibility: hidden;
+      transition: max-height .28s ease;
+    }
+    nav.menu.open { max-height: 80vh; overflow-y: auto; visibility: visible; }
+    nav.menu a { padding: 13px 24px; font-size: 1rem; border-top: 1px solid var(--line); }
+    nav.menu a:first-child { border-top: 0; }
     .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
     footer.site .cols { grid-template-columns: 1fr; }
     section { padding: 60px 0; }
@@ -537,7 +577,7 @@
       </span>
       <img class="brand-icon" src="assets/st-nicholas-icon-2.png" alt="" aria-hidden="true" />
     </a>
-    <nav class="menu" aria-label="Primary" data-cms-nav>
+    <nav class="menu" id="primary-menu" aria-label="Primary" data-cms-nav>
       <a href="#about">Parish</a>
       <a href="#faith">Worship</a>
       <a href="#schedule">Services</a>
@@ -551,6 +591,9 @@
       <a class="btn" href="#giving">Give</a>
       <a class="btn" href="#faith">Plan a Visit</a>
     </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
   </div>
 </header>
 
@@ -625,12 +668,8 @@
       <p data-cms="about.intro">Our parish is made of people of many ages, backgrounds, and cultures that hold these things in common: love for God and love for each other. We are a parish for every person who is seeking to grow in Christ. Whether you have been Orthodox all of your life, you're new to the faith, or you're just seeking stability and truth, you have a home at St Nicholas.</p>
     </div>
 
-    <div class="grid two" style="align-items:center">
-      <div data-cms-paras="about.paras">
-        <p>While our parish has historical Russian and Slavic roots, you'll find that we fully embrace our mission here in America to bring the gospel to every nation, tribe, people, and language (<a href="https://www.blueletterbible.org/esv/rev/7/9/" target="_blank" rel="noopener">Revelation 7:9</a>). English is our predominant language, but you'll hear numerous languages spoken by our parishioners and parish friends. Our parish is home to immigrants from Russia, Ukraine, Bulgaria, Romania, Japan, Germany, and other countries!</p>
-        <p>We have members who have moved to the greater Pittsburgh area from every part of the country. We have a large population of members who have embraced the ancient Orthodox Christian faith from many spiritual backgrounds and journeys.</p>
-      </div>
-      <figure class="icon-figure">
+    <div class="about-body">
+      <figure class="icon-figure icon-float">
         <div class="icon-frame">
           <img src="assets/st-nicholas-icon-2.png" data-cms-src="about.iconImage"
                loading="lazy"
@@ -640,9 +679,13 @@
           Our patron, St Nicholas the Wonderworker, Archbishop of Myra.
         </figcaption>
       </figure>
+      <div data-cms-paras="about.paras">
+        <p>While our parish has historical Russian and Slavic roots, you'll find that we fully embrace our mission here in America to bring the gospel to every nation, tribe, people, and language (<a href="https://www.blueletterbible.org/esv/rev/7/9/" target="_blank" rel="noopener">Revelation 7:9</a>). English is our predominant language, but you'll hear numerous languages spoken by our parishioners and parish friends. Our parish is home to immigrants from Russia, Ukraine, Bulgaria, Romania, Japan, Germany, and other countries!</p>
+        <p>We have members who have moved to the greater Pittsburgh area from every part of the country. We have a large population of members who have embraced the ancient Orthodox Christian faith from many spiritual backgrounds and journeys.</p>
+      </div>
     </div>
 
-    <div class="grid two" style="margin-top:48px;align-items:center;grid-template-columns:minmax(0,440px) 1fr">
+    <div class="grid media-split" style="margin-top:48px">
       <div class="carousel inline" data-interval="5000">
         <div class="cslides" data-cms-carousel="about.kidsImages">
           <img src="assets/kids-1.jpg" alt="Children of the parish at St Nicholas." />
@@ -772,6 +815,9 @@
           <div class="srow"><div class="name">Lenten Daily Vespers on Monday</div><div class="time">5:00 pm</div></div>
           <div class="srow"><div class="name">Lenten Friday Services</div><div class="time">7:00 pm</div></div>
         </div>
+        <p style="margin-top:22px;margin-bottom:0">
+          <a class="btn gold" href="https://www.youtube.com/@OrthodoxPittsburgh/live" target="_blank" rel="noopener">Watch Services Live on YouTube</a>
+        </p>
       </div>
 
       <div class="card">
@@ -982,6 +1028,14 @@
       <h2 data-cms="history.heading">Established 1914</h2>
       <p data-cms="history.intro">A complete history of our parish was published in 2014 for our centennial by Dr Kristie Bosko Mertz and can be found here.</p>
     </div>
+    <div class="carousel" data-interval="5000" style="max-width:680px;margin:0 auto 44px">
+      <div class="cslides" data-cms-carousel="history.images">
+        <img src="assets/history-1.jpg" loading="lazy" alt="Historic photograph from the early years of St Nicholas Orthodox Church." />
+        <img src="assets/history-2.jpg" loading="lazy" alt="Historic photograph of the people of St Nicholas Orthodox Church." />
+        <img src="assets/history-3.jpg" loading="lazy" alt="Historic photograph from the parish archives of St Nicholas." />
+      </div>
+    </div>
+
     <div class="grid two">
       <div data-cms-paras="history.colLeft" data-cms-lead>
         <p class="lead">Our parish has a long and rich history, having been established in 1914 by Slavic immigrants who lived in the area.</p>
@@ -991,24 +1045,6 @@
       <div data-cms-paras="history.colRight">
         <p>As time has passed, the faces and names have changed, but our dedication to and love of God has remained. Today, St Nicholas Church is made up of people from every walk of life, from every area of the Pittsburgh region, and from many nationalities. We are the proud home of many families who left the oppression of the former Soviet Union, some of them jailed for anti-Soviet activities, and persecuted for the faith. Our parish is also the new spiritual home to many people who have recently entered the Orthodox faith &mdash; former Roman Catholics, Protestants, and Pagans &mdash; as well as those who used to embrace new age thought and atheism.</p>
         <p style="margin-bottom:0"><em>Come and join us to experience the beauty and majesty of Orthodox worship and the warmth of the people of St Nicholas.</em></p>
-      </div>
-    </div>
-
-    <div class="grid two" style="margin-top:40px;align-items:center">
-      <div class="carousel portrait" data-interval="5000">
-        <div class="cslides" data-cms-carousel="history.images">
-          <img src="assets/history-1.jpg" loading="lazy" alt="Historic photograph from the early years of St Nicholas Orthodox Church." />
-          <img src="assets/history-2.jpg" loading="lazy" alt="Historic photograph of the people of St Nicholas Orthodox Church." />
-          <img src="assets/history-3.jpg" loading="lazy" alt="Historic photograph from the parish archives of St Nicholas." />
-        </div>
-      </div>
-      <div>
-        <div data-cms-paras="history.carouselParas">
-          <p>For more than a century, generation after generation has gathered in this place to glorify God. The photographs change, but the faith endures.</p>
-        </div>
-        <p style="margin-bottom:0">
-          <a class="btn ghost" href="https://www.facebook.com/OrthodoxPittsburgh/posts/pfbid031oej8Nv9bdnHcWTTUmVMYZPJJBbffL9zD9jQzr7bfa1L6jjArQ9iqGYAeRHFAxCMl" target="_blank" rel="noopener" data-cms="history.fbLabel" data-cms-href="history.fbHref">More Historic Photos on Facebook</a>
-        </p>
       </div>
     </div>
   </div>
@@ -1022,11 +1058,6 @@
       <h2 data-cms="giving.heading">Giving</h2>
       <p data-cms="giving.intro">Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href="https://orthodoxpittsburgh.org/domerestoration" target="_blank" rel="noopener">click here</a>.</p>
     </div>
-    <figure class="photo-figure">
-      <img src="assets/parish-group.jpg" loading="lazy" data-cms-src="giving.panoImage" data-cms-alt="giving.panoAlt"
-           alt="The parish family of St Nicholas Orthodox Church gathered together." />
-      <figcaption data-cms="giving.panoCaption">The parish family of St Nicholas.</figcaption>
-    </figure>
     <div class="give-actions">
       <a class="btn" href="https://donate.stripe.com/4gw16p9ZT99C0tGaEE" target="_blank" rel="noopener" data-cms="giving.oneTimeLabel" data-cms-href="giving.oneTimeHref">One-Time Donation</a>
       <a class="btn ghost" href="https://orthodoxpittsburgh.churchtrac.com/give" target="_blank" rel="noopener" data-cms="giving.recurringLabel" data-cms-href="giving.recurringHref">Recurring Donation</a>
@@ -1048,7 +1079,7 @@
       <p data-cms="visit.intro">Outlined below are the basic steps to become an Orthodox Christian. However, everyone's journey will look a bit different. Each step assumes that the inquirer has been in regular contact with Fr Thomas and that he has given you a blessing to move through each stage.</p>
     </div>
 
-    <div class="carousel compact" data-interval="5000" style="margin-bottom:36px">
+    <div class="carousel wide" data-interval="5000" style="margin-bottom:36px">
       <div class="cslides" data-cms-carousel="visit.images">
         <img src="assets/catechumens-1.jpg" loading="lazy" alt="Catechumens preparing for reception into the Orthodox Church at St Nicholas." />
         <img src="assets/baptism-4.jpg" loading="lazy" alt="The celebration of Holy Baptism at St Nicholas Orthodox Church." />
@@ -1240,7 +1271,7 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             data-cms-src="contact.mapSrc"
-            src="https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=k&z=18&output=embed">
+            src="https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=p&z=18&output=embed">
           </iframe>
         </div>
         <p style="margin-top:18px">
@@ -1249,7 +1280,6 @@
         <figure class="photo-figure" style="margin-top:18px;margin-bottom:0">
           <img src="assets/church-building.jpg" width="479" height="720" loading="lazy" data-cms-src="contact.photoImage" data-cms-alt="contact.photoAlt"
                alt="The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania." />
-          <figcaption data-cms="contact.photoCaption">Look for us on Munson Avenue &mdash; all are welcome.</figcaption>
         </figure>
       </div>
     </div>
@@ -1309,6 +1339,20 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---------- Mobile menu toggle ----------
+  (function () {
+    var btn = document.querySelector('.menu-toggle');
+    var menu = document.getElementById('primary-menu');
+    if (!btn || !menu) return;
+    function close() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Delegated so it keeps working after the menu is rehydrated from content.json
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) close(); });
+  })();
 
   // ---------- Carousels ----------
   // Auto-advance, arrows + dots. Images are centered and letterboxed within a

@@ -306,20 +306,12 @@
       { "src": "assets/history-1.jpg", "alt": "Historic photograph from the early years of St Nicholas Orthodox Church." },
       { "src": "assets/history-2.jpg", "alt": "Historic photograph of the people of St Nicholas Orthodox Church." },
       { "src": "assets/history-3.jpg", "alt": "Historic photograph from the parish archives of St Nicholas." }
-    ],
-    "carouselParas": [
-      "For more than a century, generation after generation has gathered in this place to glorify God. The photographs change, but the faith endures."
-    ],
-    "fbLabel": "More Historic Photos on Facebook",
-    "fbHref": "https://www.facebook.com/OrthodoxPittsburgh/posts/pfbid031oej8Nv9bdnHcWTTUmVMYZPJJBbffL9zD9jQzr7bfa1L6jjArQ9iqGYAeRHFAxCMl"
+    ]
   },
   "giving": {
     "eyebrow": "Support &amp; Stewardship",
     "heading": "Giving",
     "intro": "Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href=\"https://orthodoxpittsburgh.org/domerestoration\" target=\"_blank\" rel=\"noopener\">click here</a>.",
-    "panoImage": "assets/parish-group.jpg",
-    "panoAlt": "The parish family of St Nicholas Orthodox Church gathered together.",
-    "panoCaption": "The parish family of St Nicholas.",
     "oneTimeLabel": "One-Time Donation",
     "oneTimeHref": "https://donate.stripe.com/4gw16p9ZT99C0tGaEE",
     "recurringLabel": "Recurring Donation",
@@ -481,12 +473,11 @@
         "body": "Take Rt. 51 north to McKees Rocks. Turn right onto the McKees Rocks Bridge from Rt. 51. Take the Helen St. exit ramp, turn right at the bottom onto Helen St. At the first stop sign, turn right onto Ella St. At the next stop sign, turn right onto Munson Ave. The church is on the right."
       }
     ],
-    "mapSrc": "https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=k&z=18&output=embed",
+    "mapSrc": "https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=p&z=18&output=embed",
     "directionsButtonLabel": "Get Driving Directions",
     "directionsButtonHref": "https://www.google.com/maps/dir/?api=1&destination=320+Munson+Avenue,+McKees+Rocks,+PA+15136",
     "photoImage": "assets/church-building.jpg",
-    "photoAlt": "The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania.",
-    "photoCaption": "Look for us on Munson Avenue &mdash; all are welcome."
+    "photoAlt": "The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania."
   },
   "footer": {
     "brand": "St Nicholas Orthodox Church",
