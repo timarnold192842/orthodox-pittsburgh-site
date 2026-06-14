@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>St Nicholas Orthodox Church &middot; McKees Rocks, PA</title>
+<meta name="description" content="St Nicholas Orthodox Church, a parish of the Orthodox Church in America in McKees Rocks, Pennsylvania. Established 1914. Visitors welcome." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1c1a17;
+    --ink-soft: #4a443c;
+    --paper: #fbf8f2;
+    --paper-2: #f3ece0;
+    --gold: #b08328;
+    --gold-deep: #8a6418;
+    --burgundy: #6e1f2a;
+    --burgundy-deep: #531722;
+    --navy: #1f2a44;
+    --line: #e3d9c8;
+    --shadow: 0 1px 2px rgba(28,26,23,.06), 0 8px 28px rgba(28,26,23,.07);
+    --radius: 14px;
+    --maxw: 1120px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.12;
+    color: var(--ink);
+    margin: 0 0 .5em;
+    letter-spacing: .2px;
+  }
+
+  a { color: var(--burgundy); text-decoration: none; }
+  a:hover { color: var(--burgundy-deep); text-decoration: underline; }
+
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  .eyebrow {
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: .72rem;
+    font-weight: 600;
+    color: var(--gold-deep);
+    margin: 0 0 .9rem;
+  }
+
+  /* ---------- Top bar ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(251, 248, 242, .88);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 24px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 26px; height: 39px; flex: none; }
+  .brand-icon { height: 58px; width: auto; border-radius: 4px; flex: none; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
+  .brand b {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: .3px;
+    line-height: 1.05;
+  }
+  .brand span { display: block; font-family: "Inter"; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
+  nav.menu { display: flex; gap: 26px; align-items: center; }
+  nav.menu a {
+    color: var(--ink-soft);
+    font-size: .92rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  nav.menu a:hover { color: var(--burgundy); }
+  .btn {
+    display: inline-block;
+    background: var(--burgundy);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+    border: 1px solid var(--burgundy-deep);
+    transition: transform .12s ease, background .2s ease;
+  }
+  .btn:hover { background: var(--burgundy-deep); color: #fff; text-decoration: none; transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn.ghost:hover { background: var(--paper-2); color: var(--ink); }
+  .btn.gold { background: var(--gold); border-color: var(--gold-deep); color: #2a2110; }
+  .btn.gold:hover { background: var(--gold-deep); color: #fff; }
+  .nav-cta { display: flex; align-items: center; gap: 10px; }
+  .nav-cta .btn { white-space: nowrap; }
+  .menu-toggle { display: none; }
+
+  /* ---------- Hero (collage) ---------- */
+  .hero {
+    position: relative;
+    color: #f5ead6;
+    overflow: hidden;
+    padding: 0;
+    background: linear-gradient(118deg, #181109 0%, #241a10 52%, #2d2114 100%);
+    border-bottom: 3px solid var(--gold-deep);
+  }
+  .hero .wrap { position: relative; z-index: 2; padding: 30px 24px 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .hero-inner { max-width: 600px; }
+  .hero .eyebrow { color: #dcb968; }
+  .hero h1 {
+    color: #fff;
+    font-size: clamp(2.4rem, 5.6vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.05;
+    margin: 0 0 .3em;
+  }
+  .hero .lede {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.25rem, 2.3vw, 1.65rem);
+    color: #ecdcc2;
+    max-width: 600px;
+    margin: 0 0 2rem;
+    font-weight: 500;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-actions .btn.ghost {
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    border-color: rgba(255,255,255,.55);
+    backdrop-filter: blur(2px);
+  }
+  .hero-actions .btn.ghost:hover { background: rgba(255,255,255,.18); color: #fff; }
+  .hero-meta {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+    font-size: .92rem;
+    color: #d8c8ab;
+  }
+  .hero-meta span { position: relative; }
+  .hero-meta span + span::before {
+    content: "•"; position: absolute; left: -17px; color: var(--gold);
+  }
+  .hero-meta b { color: #fff; font-weight: 600; }
+
+  /* Hero image collage (exterior + vigil + patron icon) */
+  .hero-collage {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: 14px;
+    min-height: clamp(390px, 40vw, 540px);
+  }
+  .hero-collage figure {
+    margin: 0; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 16px 38px rgba(0,0,0,.42);
+    border: 1px solid rgba(255,255,255,.14);
+  }
+  .hero-collage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hc-main { grid-row: 1 / 3; grid-column: 1; }
+  .hc-main img { filter: brightness(1.12) saturate(1.04); }
+  .hc-vigil { grid-column: 2; grid-row: 1; }
+  .hc-icon {
+    grid-column: 2; grid-row: 2;
+    background: #fff; border-color: rgba(255,255,255,.6);
+    display: flex; align-items: center; justify-content: center; padding: 8px;
+  }
+  .hc-icon img { object-fit: contain; border-radius: 4px; }
+
+  /* Patron icon figure (relocated from hero) */
+  .icon-figure { margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .icon-frame {
+    position: relative; align-self: center; margin: 0 auto;
+    padding: 10px; width: 100%; max-width: 320px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .icon-frame img {
+    display: block; width: 100%; height: auto; border-radius: 6px;
+  }
+  .icon-caption {
+    margin-top: 14px;
+    font-size: .76rem; color: var(--ink-soft); line-height: 1.55;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 84px 0; }
+  section.alt { background: var(--paper-2); }
+  .section-head { max-width: 720px; margin-bottom: 48px; }
+  .section-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
+  .section-head p { color: var(--ink-soft); font-size: 1.06rem; margin: 0; }
+
+  .lead { font-size: 1.12rem; color: var(--ink-soft); }
+
+  /* grid helpers */
+  .grid { display: grid; gap: 26px; }
+  .grid.two { grid-template-columns: repeat(2, 1fr); }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  .grid.four { grid-template-columns: repeat(4, 1fr); }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 { font-size: 1.5rem; }
+  .card p:last-child { margin-bottom: 0; }
+
+  /* Schedule */
+  .schedule { display: grid; gap: 0; }
+  .srow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .srow:last-child { border-bottom: none; }
+  .srow .name { font-weight: 500; }
+  .srow .name small { display: block; color: var(--ink-soft); font-weight: 400; font-size: .85rem; }
+  .srow .time {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--burgundy);
+    white-space: nowrap;
+  }
+  .sched-note {
+    margin-top: 20px;
+    font-size: .92rem;
+    color: var(--ink-soft);
+    background: var(--paper-2);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 6px;
+  }
+
+  /* Clergy / people */
+  .person { text-align: left; overflow: hidden; }
+  .person .person-photo {
+    display: block; width: calc(100% + 56px); margin: -28px -28px 20px;
+    height: 300px; object-fit: cover; object-position: center 22%;
+  }
+  .person .person-photo.mono {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(150deg, var(--burgundy), var(--burgundy-deep));
+    color: #f3e7c9; font-family: "Cormorant Garamond", serif; font-size: 4rem; font-weight: 700;
+  }
+  .person .role {
+    font-size: .74rem; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--gold-deep); font-weight: 600; margin-bottom: 2px;
+  }
+  .person h3 { font-size: 1.45rem; margin-bottom: .15em; }
+  .person .email { font-size: .85rem; }
+  .person p { font-size: .96rem; color: var(--ink-soft); }
+
+  /* Ministries */
+  .min-col h4 {
+    font-family: "Inter", sans-serif;
+    font-size: .78rem; text-transform: uppercase; letter-spacing: .14em;
+    color: var(--gold-deep); font-weight: 600;
+    border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 12px;
+  }
+  .min-col ul { list-style: none; padding: 0; margin: 0; }
+  .min-col li { padding: 8px 0; border-top: 1px solid var(--line); }
+  .min-col li:first-child { border-top: 0; }
+  .min-col .m-role { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gold-deep); font-weight: 600; }
+  .min-col .m-name { display: block; font-size: .92rem; color: var(--ink); margin-top: 1px; }
+
+  /* Visitors beliefs */
+  .belief { display: block; }
+  .belief h3 { font-size: 1.35rem; margin: 18px 0 .25em; }
+  .belief p { margin: 0 0 1rem; font-size: .98rem; color: var(--ink-soft); }
+  .belief p:last-child { margin-bottom: 0; }
+
+  /* Carousel (auto-advancing, shows full images) */
+  .carousel {
+    position: relative; border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow); border: 1px solid var(--line); background: #15100b;
+  }
+  .carousel .cslides { position: relative; width: 100%; aspect-ratio: var(--ar, 3 / 2); }
+  .carousel .cslides img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: contain; object-position: center center;
+    opacity: 0; transition: opacity .8s ease;
+  }
+  .carousel .cslides img.active { opacity: 1; }
+
+  /* Prev / next arrows (translucent carets over the image) */
+  .carousel .carrow {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+    width: 38px; height: 38px; padding: 0; border: 0; border-radius: 50%;
+    background: rgba(20,14,9,.42); color: #fff; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    opacity: .85; transition: background .2s, opacity .2s;
+    -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  }
+  .carousel .carrow:hover { background: rgba(20,14,9,.72); opacity: 1; }
+  .carousel .carrow.prev { left: 10px; }
+  .carousel .carrow.next { right: 10px; }
+  .carousel .carrow svg { width: 16px; height: 16px; display: block; }
+
+  .carousel .cdots {
+    position: absolute; bottom: 10px; left: 0; right: 0; z-index: 2;
+    display: flex; gap: 7px; justify-content: center;
+  }
+  .carousel .cdots button {
+    width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%;
+    background: rgba(255,255,255,.55); cursor: pointer; transition: background .2s;
+    box-shadow: 0 0 3px rgba(0,0,0,.4);
+  }
+  .carousel .cdots button.active { background: #fff; }
+
+  /* Compact carousel (sits within section content, left-aligned) */
+  .carousel.compact { max-width: 360px; margin-left: 0; margin-right: 0; }
+  /* Inline carousel (fixed height so it integrates beside adjacent text) */
+  .carousel.inline .cslides { aspect-ratio: auto; height: clamp(260px, 26vw, 340px); }
+  .give-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+
+  /* Steps */
+  .steps { counter-reset: step; display: grid; gap: 20px; }
+  .step { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; }
+  .step .num {
+    counter-increment: step;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--burgundy); color: #fff;
+    display: grid; place-items: center;
+    font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 700;
+    flex: none;
+  }
+  .step .num::before { content: counter(step); }
+  .step h4 { font-size: 1.25rem; margin-bottom: .2em; }
+  .step p { margin: 0; color: var(--ink-soft); font-size: .96rem; }
+
+  /* Contact / directions */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .info-list { list-style: none; padding: 0; margin: 0; }
+  .info-list li { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .info-list li:last-child { border-bottom: none; }
+  .info-list .k { font-size: .74rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gold-deep); font-weight: 600; }
+  .info-list .v { font-size: 1.05rem; }
+  .map-embed {
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow); aspect-ratio: 4 / 3; width: 100%;
+  }
+  .map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .directions h4 { font-size: 1.15rem; margin-top: 18px; }
+  .directions p { font-size: .94rem; color: var(--ink-soft); }
+
+  /* Quote band */
+  .quote {
+    background: var(--navy);
+    color: #eef1f7;
+    text-align: center;
+  }
+  .quote .wrap { padding: 70px 24px; }
+  .quote p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+    font-weight: 500; line-height: 1.4;
+    max-width: 820px; margin: 0 auto;
+  }
+  .quote cite { display: block; margin-top: 18px; font-family: "Inter"; font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: #aebbd8; font-style: normal; }
+
+  /* Footer */
+  footer.site {
+    background: #17120d;
+    color: #cbbfa9;
+    padding: 56px 0 30px;
+  }
+  footer.site .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  footer.site h4 { color: #fff; font-family: "Inter"; font-size: .8rem; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 14px; }
+  footer.site a { color: #e0d4bd; }
+  footer.site a:hover { color: #fff; }
+  footer.site ul { list-style: none; padding: 0; margin: 0; }
+  footer.site li { padding: 4px 0; font-size: .92rem; }
+  .foot-brand b { font-family: "Cormorant Garamond", serif; color: #fff; font-size: 1.4rem; }
+  .socials { display: flex; gap: 12px; margin-top: 16px; }
+  .socials a {
+    width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.16);
+    display: grid; place-items: center; color: #e0d4bd;
+  }
+  .socials a:hover { background: var(--burgundy); border-color: var(--burgundy); color: #fff; }
+  .socials svg { width: 18px; height: 18px; }
+  .legal {
+    margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1);
+    font-size: .82rem; color: #9c9079;
+    display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between;
+  }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .grid.three, .grid.four { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .grid.three, .grid.four { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer.site .cols { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    nav.menu { display: none; }
+    .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
+    footer.site .cols { grid-template-columns: 1fr; }
+    section { padding: 60px 0; }
+    .hero .wrap { padding-top: 64px; padding-bottom: 70px; }
+  }
+
+  /* ---------- Full-bleed feature band (aerial / community photo) ---------- */
+  .feature-band { position: relative; overflow: hidden; background: #17120d; }
+  .feature-band img {
+    display: block; width: 100%;
+    height: clamp(300px, 44vw, 580px); object-fit: cover;
+  }
+  .feature-band .band-caption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 70px 24px 26px;
+    background: linear-gradient(to top, rgba(20,12,8,.82), rgba(20,12,8,.32) 55%, transparent);
+    color: #f5ead6;
+  }
+  .feature-band .band-caption .inner { max-width: 1140px; margin: 0 auto; }
+  .feature-band .band-caption .eyebrow { color: #dcb968; }
+  .feature-band .band-caption h2 { color: #fff; font-size: clamp(1.7rem, 3.4vw, 2.6rem); margin: 0 0 .25em; }
+  .feature-band .band-caption p {
+    margin: 0; color: #ecdcc2; max-width: 680px;
+    font-family: "Cormorant Garamond", serif; font-size: clamp(1.1rem, 2vw, 1.4rem);
+  }
+
+  /* ---------- Photo figure ---------- */
+  .photo-figure { margin: 0 0 30px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); background: var(--paper-2); }
+  .photo-figure img { display: block; width: 100%; height: auto; }
+  .photo-figure figcaption { padding: 13px 18px; font-size: .9rem; color: var(--ink-soft); }
+
+  /* ---------- Photo gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); background: var(--paper-2); position: relative; }
+  .gallery a { display: block; aspect-ratio: 1 / 1; overflow: hidden; }
+  .gallery img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform .5s ease; }
+  .gallery a:hover img { transform: scale(1.06); }
+  .gallery figcaption { padding: 11px 15px; font-size: .85rem; color: var(--ink-soft); background: var(--paper); }
+
+  /* ---------- Facebook follow row ---------- */
+  .fb-head { margin: 44px 0 16px; }
+  .fb-embed { max-width: 500px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #fff; padding: 14px; }
+  .fb-embed iframe { width: 100%; max-width: 500px; height: 600px; border: 0; display: block; }
+
+  /* ---------- Calendar ---------- */
+  .cal-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 26px; align-items: start; }
+  .cal-embed { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #fff; }
+  .cal-embed h3 { margin: 0; padding: 16px 20px 0; }
+  .cal-embed iframe { width: 100%; height: 600px; border: 0; display: block; }
+
+  @media (max-width: 900px) {
+    .cal-grid { grid-template-columns: 1fr; }
+    .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+    .hero-collage { min-height: 340px; }
+  }
+  @media (max-width: 680px) {
+    .gallery { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====================== HEADER ====================== -->
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="St Nicholas Orthodox Church home">
+      <svg viewBox="0 0 100 150" fill="#b08328" aria-hidden="true">
+        <rect x="45" y="6" width="10" height="138" rx="3"/>
+        <rect x="34" y="22" width="32" height="7" rx="3"/>
+        <rect x="16" y="48" width="68" height="8" rx="3"/>
+        <rect x="28" y="104" width="44" height="7" rx="3" transform="rotate(20 50 107)"/>
+      </svg>
+      <span class="brand-text">
+        <b>St Nicholas</b>
+        <span>Orthodox Church</span>
+      </span>
+      <img class="brand-icon" src="assets/st-nicholas-novgorod-1294.jpg" alt="" aria-hidden="true" />
+    </a>
+    <nav class="menu" aria-label="Primary">
+      <a href="#about">Parish</a>
+      <a href="#faith">Worship</a>
+      <a href="#schedule">Services</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#gallery">Photos</a>
+      <a href="#clergy">Leadership</a>
+      <a href="#contact">Visit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="#giving">Give</a>
+      <a class="btn" href="#faith">Plan a Visit</a>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-inner">
+        <p class="eyebrow">A Parish of the Orthodox Church in America</p>
+        <h1>St Nicholas Orthodox Church</h1>
+        <p class="lede">We strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.</p>
+        <div class="hero-actions">
+          <a class="btn gold" href="#schedule">Service Times</a>
+          <a class="btn ghost" href="#faith" style="color:#f7efe0;border-color:rgba(255,255,255,.3)">First-Time Visitor?</a>
+        </div>
+        <div class="hero-meta">
+          <span><b>Established 1914</b> &middot; McKees Rocks, PA</span>
+          <span>Sunday Divine Liturgy <b>10:00 am</b></span>
+          <span>Saturday Great Vespers <b>5:00 pm</b></span>
+        </div>
+      </div>
+      <div class="hero-collage">
+        <figure class="hc-main">
+          <img src="assets/church-building.jpg" width="479" height="720"
+               alt="The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania." />
+        </figure>
+        <figure class="hc-vigil">
+          <img src="assets/church-aerial.png" width="2048" height="1152" loading="lazy"
+               alt="The faithful of St Nicholas processing by candlelight around the church at night." />
+        </figure>
+        <figure class="hc-icon">
+          <img src="assets/st-nicholas-novgorod-1294.jpg" width="1400" height="1941" loading="lazy"
+               alt="Icon of St Nicholas the Wonderworker, Archbishop of Myra, painted in Novgorod, 1294." />
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== ABOUT / PARISH ====================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Parish</p>
+      <h2>We're a diverse people!</h2>
+      <figure class="photo-figure" style="margin:0 0 24px">
+        <img src="assets/parish-group.jpg" width="960" height="430" loading="lazy"
+             alt="The parish family of St Nicholas Orthodox Church gathered together before the iconostasis." />
+      </figure>
+      <p>Our parish is made of people of many ages, backgrounds, and cultures that hold these things in common: love for God and love for each other. We are a parish for every person who is seeking to grow in Christ. Whether you have been Orthodox all of your life, you're new to the faith, or you're just seeking stability and truth, you have a home at St Nicholas.</p>
+    </div>
+
+    <div class="grid two" style="align-items:center">
+      <div>
+        <p>While our parish has historical Russian and Slavic roots, you'll find that we fully embrace our mission here in America to bring the gospel to every nation, tribe, people, and language (<a href="https://www.blueletterbible.org/esv/rev/7/9/" target="_blank" rel="noopener">Revelation 7:9</a>). English is our predominant language, but you'll hear numerous languages spoken by our parishioners and parish friends. Our parish is home to immigrants from Russia, Ukraine, Bulgaria, Romania, Japan, Germany, and other countries!</p>
+        <p>We have members who have moved to the greater Pittsburgh area from every part of the country. We have a large population of members who have embraced the ancient Orthodox Christian faith from many spiritual backgrounds and journeys.</p>
+      </div>
+      <figure class="icon-figure">
+        <div class="icon-frame">
+          <img src="assets/st-nicholas-novgorod-1294.jpg"
+               width="1400" height="1941" loading="lazy"
+               alt="Icon of St Nicholas the Wonderworker, Archbishop of Myra, painted by Alexa Petrov in Novgorod, 1294, with Christ and the Theotokos in the upper corners and saints in the border." />
+        </div>
+        <figcaption class="icon-caption">
+          Our patron, St Nicholas the Wonderworker, Archbishop of Myra.<br>
+          Icon by Alexa Petrov &middot; Novgorod, 1294 &middot; Public domain via <a href="https://commons.wikimedia.org/wiki/File:Nikola_from_1294.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="grid two" style="margin-top:48px;align-items:center;grid-template-columns:minmax(0,440px) 1fr">
+      <div class="carousel inline" data-interval="5000">
+        <div class="cslides">
+          <img src="assets/kids-1.jpg" alt="Children of the parish at St Nicholas." />
+          <img src="assets/kids-2.jpg" loading="lazy" alt="Young parishioners taking part in parish life." />
+          <img src="assets/kids-3.jpg" loading="lazy" alt="A child of the parish during a service." />
+          <img src="assets/kids-4.jpg" loading="lazy" alt="Children of St Nicholas together at the parish." />
+          <img src="assets/kids-5.jpg" loading="lazy" alt="Young members of St Nicholas enjoying parish life." />
+          <img src="assets/kids-6.jpg" loading="lazy" alt="Children taking part in the life of St Nicholas." />
+          <img src="assets/kids-7.jpg" loading="lazy" alt="Little ones of the St Nicholas parish family." />
+        </div>
+      </div>
+      <div class="card">
+        <h3>We love kids!</h3>
+        <p>St Nicholas enthusiastically pursues our misson to nurture our precious children in the Orthodox Christian faith. From our church school students to the littlest one in arms, you'll find a friendly, welcoming atmosphere for children during our services. Our parents understand that it can be a blessed struggle to raise children properly in the Christian faith, and that includes worship! At St Nicholas you will find a supportive family to help.</p>
+        <p><em>We are grateful to God for bringing you to visit us here today &mdash; we look forward to meeting you in person!</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WORSHIP / FAITH ====================== -->
+<section class="alt" id="faith">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visitors</p>
+      <h2>Your First Visit to an Orthodox Church</h2>
+      <p>Orthodox worship can seem strange to someone who has never been to an Orthodox Church before. However, we belive that our worship must be in Spirit and in truth (<a href="https://www.blueletterbible.org/esv/jhn/4/24/" target="_blank" rel="noopener">Jn 4:24</a>).</p>
+    </div>
+
+    <figure class="photo-figure">
+      <img src="assets/church-interior-2.jpg" width="2048" height="1538" loading="lazy"
+           alt="The interior of St Nicholas Orthodox Church with its iconostasis and frescoes." />
+    </figure>
+
+    <div class="grid two">
+      <div class="belief">
+        <div class="carousel" data-interval="5500">
+          <div class="cslides">
+            <img src="assets/worship-2.jpg" loading="lazy" alt="Clergy serving the Divine Liturgy at St Nicholas Orthodox Church." />
+            <img src="assets/worship-4.jpg" loading="lazy" alt="The faithful gathered for worship at St Nicholas." />
+            <img src="assets/worship-1.jpg" loading="lazy" alt="Standing in prayer during the Divine Liturgy." />
+          </div>
+        </div>
+        <h3>Our worship is Biblical</h3>
+        <p>Orthodox worship is rich with scriptures &mdash; not just the reading of the scriptures, but from the hymns to the petitions, everything we do in worship is based on scripture. The Book of Psalms is often called the Hymnbook of the Church, and we sing and read a lot of them! Orthodox Christians often memorize many Psalms simply from hearing them so often in our worship services.</p>
+        <p>However, you'll not only hear scripture, you'll see it. The patterns of Orthodox worship, based in the Christian fulfillment of Jewish liturigical worship, is most fully a manifestation of descriptions we read about in the New Testament Letter to the Hebrews and in the Book of Revelation. We join into the worship that is eternally sung before the throne of God (<a href="https://www.blueletterbible.org/esv/isa/6/" target="_blank" rel="noopener">Isaiah 6</a>).</p>
+        <p>You'll also see that Orthodox Christians stand a lot during worship. While there are chairs and pews, able-bodied Orthodox Christians prefer to stand in worship, because they are in the very Presence of God!</p>
+      </div>
+      <div class="belief">
+        <div class="carousel" data-interval="5500">
+          <div class="cslides">
+            <img src="assets/baptism-1.jpg" loading="lazy" alt="A baptism by full immersion at St Nicholas Orthodox Church." />
+            <img src="assets/baptism-2.jpg" loading="lazy" alt="The mystery of Holy Baptism celebrated at St Nicholas." />
+            <img src="assets/baptism-3.jpg" loading="lazy" alt="Receiving a new member through Baptism at St Nicholas." />
+            <img src="assets/baptism-4.jpg" loading="lazy" alt="The celebration of Holy Baptism at St Nicholas Orthodox Church." />
+          </div>
+        </div>
+        <h3>The Sacraments Give Us Life</h3>
+        <p>We participate in the new life of the Kingdom of God through the sacraments (mysteries) by the power of the Holy Spirit. In Baptism, we die and rise with Christ (<a href="https://www.blueletterbible.org/esv/rom/6/" target="_blank" rel="noopener">Romans 6</a>). In the Eucharist, we are sustained by Christ's Body and Blood (<a href="https://www.blueletterbible.org/esv/jhn/6/" target="_blank" rel="noopener">John 6</a>). In Holy Anointing, our sins are forgiven for healing (<a href="https://www.blueletterbible.org/esv/jas/5/" target="_blank" rel="noopener">James 5</a>). Each sacrament is the way faithful Orthodox Christians participate in the Divine Life given to us as a gift here and now, and as a foretaste of our eternal inheiritance.</p>
+      </div>
+      <div class="belief">
+        <div class="carousel" data-interval="5500">
+          <div class="cslides">
+            <img src="assets/icons-1.jpg" loading="lazy" alt="Iconography of Christ adorning the interior of St Nicholas Orthodox Church." />
+            <img src="assets/icons-2.jpg" loading="lazy" alt="Holy icons venerated within St Nicholas." />
+            <img src="assets/icons-6.jpg" loading="lazy" alt="An icon at St Nicholas Orthodox Church." />
+          </div>
+        </div>
+        <h3>Icons</h3>
+        <p>The most distinctive feature of Orthodox Churches is their use of iconography or holy images. Simply put, icons testify to the truth of the incarnation of Christ. He became a man, and therefore He can be pictured. Orthodox Christians would say, in fact, that He must be pictured. Otherwise, we can easily forget that He became a real human for our sake, and that He came to redeem humanity. He is, indeed, the God-Man, fully divine as the eternal Word of God (<a href="https://www.blueletterbible.org/esv/jhn/1/" target="_blank" rel="noopener">John 1</a>). But He became truly human, like us in everything but sin (<a href="https://www.blueletterbible.org/esv/heb/4/" target="_blank" rel="noopener">Hebrews 4</a>).</p>
+        <p>We kiss the icons of Christ, His Mother, and the Saints, not out of idolatry (God forbid!), but out of honor. The honor we show passes to the person whose image is depicted.</p>
+      </div>
+      <div class="belief">
+        <div class="carousel" data-interval="5500">
+          <div class="cslides">
+            <img src="assets/church-interior-4.jpg" loading="lazy" alt="Parishioners standing in worship within St Nicholas Orthodox Church." />
+            <img src="assets/church-interior-3.jpg" loading="lazy" alt="The faithful at prayer inside St Nicholas." />
+            <img src="assets/church-interior-6.jpg" loading="lazy" alt="The faithful gathered in prayer within St Nicholas Orthodox Church." />
+          </div>
+        </div>
+        <h3>The Sign of the Cross</h3>
+        <p>You'll see Orthodox Christians trace the sign of the cross on their bodies frequently. This is the traditional way in which we bless ourselves, and in which we are blessed by others. Making the sign of the cross is one of the most ancient practices of Christians, and it is the sign par excellence of Christianity.</p>
+      </div>
+      <div class="belief">
+        <div class="carousel" data-interval="5500">
+          <div class="cslides">
+            <img src="assets/singing-1.jpg" loading="lazy" alt="The choir leading the unaccompanied singing at St Nicholas Orthodox Church." />
+            <img src="assets/singing-2.jpg" loading="lazy" alt="A cantor singing during worship at St Nicholas." />
+            <img src="assets/singing-3.jpg" loading="lazy" alt="Singing the hymns of the Church at St Nicholas." />
+          </div>
+        </div>
+        <h3>Singing</h3>
+        <p>Orthodox Christians love to sing! Our singing is always unaccompanied by any musical instruments. This is another sign that our worship is joined to the heavenly choirs with the angels and all the saints who gather around the throne of God and of the Lamb.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin:36px auto 0;max-width:820px;text-align:center;background:#fff">
+      <h3 style="margin-bottom:.3em">Join in!</h3>
+      <p style="max-width:760px;margin:0 auto 1.3rem;color:var(--ink-soft)">We want you to feel welcomed during our services. While Orthodox worship may seem somewhat unfamiliar, we believe fully and without reservation that Orthodox worship is the way worship is supposed to look like. This is worship as it was always meant to be. Discovering it for the first time has been an overwhelming sense of joy for people around the world, and we hope you'll come to discover that too.</p>
+      <a class="btn" href="#contact">Plan Your Visit &amp; Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SCHEDULE ====================== -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Liturgical Services &amp; Educational Offerings</p>
+      <h2>Service schedule</h2>
+      <p>Please consult the calendar for the latest schedule and any changes that may occur.</p>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>Our regular liturgical service times are:</h3>
+        <div class="schedule">
+          <div class="srow"><div class="name">Saturday Great Vespers with Cathedral Vigil</div><div class="time">5:00 pm</div></div>
+          <div class="srow"><div class="name">Sunday Divine Liturgy</div><div class="time">10:00 am</div></div>
+          <div class="srow"><div class="name">Daily Matins every Tuesday and Thursday</div><div class="time">9:00 am</div></div>
+          <div class="srow"><div class="name">Daily Vespers on second and fourth Wednesdays <small>(before Bible Study)</small></div><div class="time">6:30 pm</div></div>
+          <div class="srow"><div class="name">Feast Day Vespers</div><div class="time">7:00 pm</div></div>
+          <div class="srow"><div class="name">Feast Day Divine Liturgy</div><div class="time">9:30 am</div></div>
+          <div class="srow"><div class="name">Lenten Wednesday Presanctified Liturgy</div><div class="time">6:00 pm</div></div>
+          <div class="srow"><div class="name">Lenten Daily Vespers on Monday</div><div class="time">5:00 pm</div></div>
+          <div class="srow"><div class="name">Lenten Friday Services</div><div class="time">7:00 pm</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Our regular educational offering times are:</h3>
+        <div class="schedule">
+          <div class="srow"><div class="name">Sunday Morning Adult Education on first and third Sundays</div><div class="time">9:15 am</div></div>
+          <div class="srow"><div class="name">Sunday Church School at the end of Divine Liturgy</div><div class="time">&mdash;</div></div>
+          <div class="srow"><div class="name">Bible Study on second and fourth Wednesdays</div><div class="time">7:00 pm</div></div>
+        </div>
+        <div class="sched-note">
+          Check the online calendar for any special classes, lectures, and offerings.
+        </div>
+        <p style="margin-top:22px;margin-bottom:0">
+          <a class="btn" href="#calendar">View Parish Calendar</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CALENDAR ====================== -->
+<section class="alt" id="calendar">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Parish Calendar</p>
+      <h2>Upcoming events</h2>
+      <p>Liturgical services, classes, and parish events. Please consult the calendar for the latest schedule and any changes that may occur.</p>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-embed agenda">
+        <iframe
+          title="St Nicholas Orthodox Church &mdash; upcoming events"
+          loading="lazy"
+          src="https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff">
+        </iframe>
+      </div>
+      <div class="cal-embed month">
+        <iframe
+          title="St Nicholas Orthodox Church &mdash; month calendar"
+          loading="lazy"
+          src="https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff">
+        </iframe>
+      </div>
+    </div>
+    <p style="margin-top:26px;margin-bottom:0">
+      <a class="btn ghost" href="https://orthodoxpittsburgh.org/parishcalendar.html" target="_blank" rel="noopener">Open Full Calendar</a>
+    </p>
+  </div>
+</section>
+
+<!-- ====================== QUOTE BAND ====================== -->
+<section class="quote">
+  <div class="wrap">
+    <p>&ldquo;St. Nicholas Church will strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.&rdquo;</p>
+    <cite>Our Mission</cite>
+  </div>
+</section>
+
+<!-- ====================== PARISH LIFE / GALLERY ====================== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Parish Life</p>
+      <h2>Come and see</h2>
+      <p>From the Divine Liturgy to fellowship, festivals, and service to our neighbors &mdash; a glimpse of the people of St Nicholas. Many more photos, including images from our parish history, live on our Facebook page.</p>
+    </div>
+
+    <figure class="photo-figure">
+      <img src="assets/parish-group.jpg" width="960" height="430" loading="lazy"
+           alt="The parish family of St Nicholas gathered before the iconostasis with their archbishop." />
+    </figure>
+
+    <div class="gallery">
+      <figure>
+        <a href="assets/worship-4.jpg" target="_blank" rel="noopener">
+          <img src="assets/worship-4.jpg" loading="lazy"
+               alt="The faithful gathered for the Divine Liturgy at St Nicholas." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/baptism-2.jpg" target="_blank" rel="noopener">
+          <img src="assets/baptism-2.jpg" loading="lazy"
+               alt="A baptism celebrated at St Nicholas Orthodox Church." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/fellowship-3.jpg" target="_blank" rel="noopener">
+          <img src="assets/fellowship-3.jpg" loading="lazy"
+               alt="Parishioners gathered together in fellowship." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/church-interior-3.jpg" target="_blank" rel="noopener">
+          <img src="assets/church-interior-3.jpg" loading="lazy"
+               alt="The frescoed interior and dome of St Nicholas Orthodox Church." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/icons-1.jpg" target="_blank" rel="noopener">
+          <img src="assets/icons-1.jpg" loading="lazy"
+               alt="Icons venerated within St Nicholas Orthodox Church." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/fellowship-1.jpg" target="_blank" rel="noopener">
+          <img src="assets/fellowship-1.jpg" loading="lazy"
+               alt="Parishioners enjoying a parish gathering." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/singing-1.jpg" target="_blank" rel="noopener">
+          <img src="assets/singing-1.jpg" loading="lazy"
+               alt="The choir singing during worship at St Nicholas." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/food-1.jpg" target="_blank" rel="noopener">
+          <img src="assets/food-1.jpg" loading="lazy"
+               alt="Preparing food together at a St Nicholas parish event." />
+        </a>
+      </figure>
+      <figure>
+        <a href="assets/fellowship-4.jpg" target="_blank" rel="noopener">
+          <img src="assets/fellowship-4.jpg" loading="lazy"
+               alt="The parish community sharing time together." />
+        </a>
+      </figure>
+    </div>
+
+    <div class="fb-head">
+      <a class="btn" href="https://www.facebook.com/OrthodoxPittsburgh/photos" target="_blank" rel="noopener">Browse More Photos on Facebook</a>
+    </div>
+    <div class="fb-embed">
+      <iframe
+        title="St Nicholas Orthodox Church on Facebook"
+        loading="lazy"
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOrthodoxPittsburgh&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+        scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CLERGY / LEADERSHIP ====================== -->
+<section id="clergy">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our Leadership</p>
+      <h2>Our Leadership</h2>
+    </div>
+
+    <div class="grid three">
+      <div class="card person">
+        <img class="person-photo" src="assets/fr-tom.jpg" loading="lazy" alt="Fr Thomas Soroka, Rector of St Nicholas Orthodox Church." />
+        <div class="role">Rector</div>
+        <h3>Fr Thomas Soroka</h3>
+        <a class="email" href="mailto:frthomas@orthodoxpittsburgh.org">frthomas@orthodoxpittsburgh.org</a>
+        <p>Father Thomas is a native of Pittsburgh, holds degrees from Duquesne University, and attended St Vladimir's Orthodox Theological Seminary in Crestwood NY. He descends from a long line of Orthodox priests and church musicians. He oversees the work of the Departments of the Orthodox Church in America and he serves on the Diocesan Council of the Archdiocese of Pittsburgh and Western Pennsylvania. He's a frequent speaker in parishes on various spiritual topics including parish growth and leadership, and directs the Pan-Orthodox Choir of Pittsburgh. Fr Thomas can also be heard regularly on Ancient Faith Radio and occasionally on local Christan radio. He and his wife, Matushka Joni Soroka, a native of Louisville KY, have three daughters.</p>
+      </div>
+      <div class="card person">
+        <img class="person-photo" src="assets/dn-luke.jpg" loading="lazy" alt="Deacon Luke Loboda of St Nicholas Orthodox Church." />
+        <div class="role">Deacon</div>
+        <h3>Dn Luke Loboda</h3>
+        <a class="email" href="mailto:dnluke@orthodoxpittsburgh.org">dnluke@orthodoxpittsburgh.org</a>
+        <p>Deacon Luke was ordained in 2016 to the Holy Diaconate by Archbishop Melchisedek and has been a member of St Nicholas Church since 2009. A life-long Orthodox Christian, he and his wife, Dr Ashley Loboda, have three sons and a daughter. He is a graduate of Ashland University (Ohio), earned a MA in American History and Government, and teaches in a local school district.</p>
+      </div>
+      <div class="card person">
+        <img class="person-photo" src="assets/dn-john.jpg" loading="lazy" alt="Deacon John Skowron of St Nicholas Orthodox Church." />
+        <div class="role">Deacon</div>
+        <h3>Dn John Skowron</h3>
+        <a class="email" href="mailto:dnjohn@orthodoxpittsburgh.org">dnjohn@orthodoxpittsburgh.org</a>
+        <p>Deacon John was ordained to the Holy Diaconate in 2021 by Archbishop Melchisedek and has been a member of St Nicholas since 2013. Born and raised in Pittsburgh, he and his wife Kate have three daughters and one son. He obtained his undergraduate degree from Georgetown University, a masters degree from Oxford University, and a law degree from the University of Pittsburgh. He is a licensed attorney and practices law at a firm in downtown Pittsburgh.</p>
+      </div>
+      <div class="card person">
+        <img class="person-photo" src="assets/melissa-graff.jpg" loading="lazy" alt="Melissa Graff, Parish Council President at St Nicholas Orthodox Church." />
+        <div class="role">Parish Council President</div>
+        <h3>Melissa Graff</h3>
+        <a class="email" href="mailto:mgraff@orthodoxpittsburgh.org">mgraff@orthodoxpittsburgh.org</a>
+        <p>Melissa, a native of Pittsburgh, holds a degree in Business Administration from the University of Pittsburgh. Formerly employed as the Assistant Director of Annual Programs at the University of Pittsburgh, besides managing a busy household, she currently assists the Departments of the Orthodox Church in America and is a Production Assistant for Ancient Faith Radio. A life-long Orthodox Christian, she and her husband, Nathan, have three children.</p>
+      </div>
+      <div class="card person">
+        <img class="person-photo" src="assets/james-wargo.jpg" loading="lazy" alt="Reader James Wargo, Choir Director at St Nicholas Orthodox Church." />
+        <div class="role">Choir Director</div>
+        <h3>Rdr James Wargo</h3>
+        <a class="email" href="mailto:choirdirector@orthodoxpittsburgh.org">choirdirector@orthodoxpittsburgh.org</a>
+        <p>James Wargo is a lifelong Orthodox Christian and son of Fr Joseph Wargo. He is from Butler County, Pennsylvania and was raised in St Andrew's in Lyndora. In 2004, he received an associates degree from Pittsburgh Technical Institute in Computer Networking Systems and works in this field as an IT support specialist. He was a choir member in the church and the local community from childhood, and was also involved in musical theater. He was trained as a choir director through the OCA and has directed at St Andrew's and at the Cranberry mission parish of the Antiochian diocese. He is an avid golfer, plays volleyball, and loves to travel with his wife Jessica.</p>
+      </div>
+      <div class="card person">
+        <img class="person-photo" src="assets/danielle-bartko.jpg" loading="lazy" alt="Danielle Bartko, Choir Director at St Nicholas Orthodox Church." />
+        <div class="role">Choir Director</div>
+        <h3>Danielle Bartko</h3>
+        <a class="email" href="mailto:choirdirector@orthodoxpittsburgh.org">choirdirector@orthodoxpittsburgh.org</a>
+        <p>Danielle Bartko is a native of New Jersey and a life-long Orthodox Christian from the Carpatho-Rusyn tradition. She has directed choirs at three different parishes in Pennsylvania and was a cantor in both Pennsylvania and New Jersey. She has a B.A. in Biology and a minor in music from Lafayette College and a teaching certificate from DeSales University with a focus on math and science. She and has taught at both in-person and online Orthodox Christian schools. She currently is a home-schooling mom and online educator at Saint Raphael School, and is married with two children.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== HISTORY ====================== -->
+<section class="alt" id="history">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Our History</p>
+      <h2>Established 1914</h2>
+      <p>A complete history of our parish was published in 2014 for our centennial by Dr Kristie Bosko Mertz and can be found here.</p>
+    </div>
+    <div class="grid two">
+      <div>
+        <p class="lead">Our parish has a long and rich history, having been established in 1914 by Slavic immigrants who lived in the area.</p>
+        <p>By 1913, numerous families in McKees Rocks were traveling by boat every Sunday to attend the only Orthodox church available to them, on the other side of the Ohio River! But their dedication to God and their industrious ways led them to build a beautiful church to the glory of God. Our current building was dedicated in 1917.</p>
+        <p>St Nicholas welcomed many new families, especially during the great immigration in the 1920's and 1930's, who had made the arduous journey from Europe to their new home in America. Much of Pittsburgh's then flourishing industry was built on the hard work and dedication of these people.</p>
+      </div>
+      <div>
+        <p>As time has passed, the faces and names have changed, but our dedication to and love of God has remained. Today, St Nicholas Church is made up of people from every walk of life, from every area of the Pittsburgh region, and from many nationalities. We are the proud home of many families who left the oppression of the former Soviet Union, some of them jailed for anti-Soviet activities, and persecuted for the faith. Our parish is also the new spiritual home to many people who have recently entered the Orthodox faith &mdash; former Roman Catholics, Protestants, and Pagans &mdash; as well as those who used to embrace new age thought and atheism.</p>
+        <p style="margin-bottom:0"><em>Come and join us to experience the beauty and majesty of Orthodox worship and the warmth of the people of St Nicholas.</em></p>
+      </div>
+    </div>
+
+    <div class="grid two" style="margin-top:40px;align-items:center">
+      <div class="carousel portrait" data-interval="5000">
+        <div class="cslides">
+          <img src="assets/history-1.jpg" loading="lazy" alt="Historic photograph from the early years of St Nicholas Orthodox Church." />
+          <img src="assets/history-2.jpg" loading="lazy" alt="Historic photograph of the people of St Nicholas Orthodox Church." />
+          <img src="assets/history-3.jpg" loading="lazy" alt="Historic photograph from the parish archives of St Nicholas." />
+        </div>
+      </div>
+      <div>
+        <p>For more than a century, generation after generation has gathered in this place to glorify God. The photographs change, but the faith endures.</p>
+        <p style="margin-bottom:0">
+          <a class="btn ghost" href="https://www.facebook.com/OrthodoxPittsburgh/posts/pfbid031oej8Nv9bdnHcWTTUmVMYZPJJBbffL9zD9jQzr7bfa1L6jjArQ9iqGYAeRHFAxCMl" target="_blank" rel="noopener">More Historic Photos on Facebook</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== GIVING ====================== -->
+<section id="giving">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Support &amp; Stewardship</p>
+      <h2>Giving</h2>
+      <p>Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href="https://orthodoxpittsburgh.org/domerestoration" target="_blank" rel="noopener">click here</a>.</p>
+    </div>
+    <figure class="photo-figure">
+      <img src="assets/parish-group.jpg" loading="lazy"
+           alt="The parish family of St Nicholas Orthodox Church gathered together." />
+      <figcaption>The parish family of St Nicholas.</figcaption>
+    </figure>
+    <div class="give-actions">
+      <a class="btn" href="https://donate.stripe.com/4gw16p9ZT99C0tGaEE" target="_blank" rel="noopener">One-Time Donation</a>
+      <a class="btn ghost" href="https://orthodoxpittsburgh.churchtrac.com/give" target="_blank" rel="noopener">Recurring Donation</a>
+    </div>
+    <h3 style="font-size:1.5rem;margin-bottom:.4em">Stewardship at St Nicholas</h3>
+    <p style="color:var(--ink-soft)"><em>&ldquo;He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. So let each one give as he purposes in his heart, not grudgingly or of necessity; for God loves a cheerful giver.&rdquo;</em> (<a href="https://www.blueletterbible.org/esv/2co/9/6/" target="_blank" rel="noopener">2 Cor 9:6&ndash;7</a>)</p>
+    <p style="color:var(--ink-soft);margin-bottom:0">Parishioners at St Nicholas are encouraged to be good stewards of the time, talent, and treasure God has bestowed on them. This stewardship involves acknowledging that &ldquo;every good gift and every perfect gift is from above, and comes down from the Father of lights,&rdquo; (<a href="https://www.blueletterbible.org/esv/jas/1/17/" target="_blank" rel="noopener">James 1:17</a>) and then taking a first portion of those gifts to offer them back to God in thanksgiving. In November of each year, parishioners are encouraged to plan out their offerings for the following year so that the parish can continue the work in the community which God has planted in our midst.</p>
+  </div>
+</section>
+
+<!-- ====================== VISIT / BECOMING ORTHODOX ====================== -->
+<section id="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How to Become Orthodox</p>
+      <h2>Becoming Orthodox</h2>
+      <p>Outlined below are the basic steps to become an Orthodox Christian. However, everyone's journey will look a bit different. Each step assumes that the inquirer has been in regular contact with Fr Thomas and that he has given you a blessing to move through each stage.</p>
+    </div>
+
+    <div class="carousel compact" data-interval="5000" style="margin-bottom:36px">
+      <div class="cslides">
+        <img src="assets/catechumens-1.jpg" loading="lazy" alt="Catechumens preparing for reception into the Orthodox Church at St Nicholas." />
+        <img src="assets/baptism-4.jpg" loading="lazy" alt="The celebration of Holy Baptism at St Nicholas Orthodox Church." />
+        <img src="assets/baptism-3.jpg" loading="lazy" alt="Reception of a new member through Holy Baptism at St Nicholas." />
+        <img src="assets/baptism-1.jpg" loading="lazy" alt="A baptism by full immersion at St Nicholas Orthodox Church." />
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Attend church services regularly and often</h4>
+          <p>When we call ourselves "Orthodox," we automatically define ourselves by our communal worship practices. Orthodoxy means the "right glorification" or "right worship" of God. Readings books, watching videos, having theological disucssions, and attending classes should ultimately lead one to stand before God in thanksgiving and worship for everything He has done and continues to do for us.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Formally enroll into the Catechumenate Program</h4>
+          <p>After a period of discernment, and with the blessing of Fr Thomas, the inquirer will be formally enrolled among the catechumens. This means that the inquirer has professed an intention to become a member of the Orthodox Church and is undergoing instruction in the essentials of the Orthodox Christian faith.</p>
+          <p>Both a spring and fall cohort will have opportunities for the same instruction. Catechumens must complete a minimum of eight class sessions on the fundamental doctrines and practices of the Orthodox Christian faith as partial fulfillment of the catechumenate. The church calendar publicizes the date and location of all classes. Please see your parish ChurchConnect account or our website for our events calendar.</p>
+          <p>Other aspects of catechumen preparation include formation in Orthodox prayer and fasting, participation in charitable service to others, and social integration into the parish community. More information about this appears on the Preparation for Catechumens form on your ChurchConnect account.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Reception into the Orthodox Church</h4>
+          <p>After successful completion of the above requirements, a free and unconstrained intention to enter fully into the eucharistic communion of Orthodox Christianity, and with the blessing of Fr Thomas, a date will be set for formal reception into the Orthodox Church.</p>
+          <p>The manner of reception, according to the ancient Tradition of the Church, will depend on a number of factors and determined in consultation with Fr Thomas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:36px;background:var(--paper-2);border-style:dashed">
+      <h3>How to Become a Member of St Nicholas</h3>
+      <p>This page is for interested persons who are already Orthodox. If you are not Orthodox, please see our Becoming Orthodox page.</p>
+      <p>St Nicholas is a vibrant and active parish of dedicated Orthodox Christians. If you are Orthodox, you have visited our parish, and you would like to become a member, there are a few things you should do:</p>
+      <p style="margin-bottom:.4em">1. Please introduce yourself to one of our members and to Father Thomas, Deacon Luke, or Deacon John at your next visit, if you haven't already done so.</p>
+      <p style="margin-bottom:.4em">2. Please go to our Church Connect page and create an account. (Your account can take up to 24 hours to be approved.)</p>
+      <p>3. Once logged into your account, you will be able to access our Parish Application Form. You will be asked to provide your contact information, the Orthodox Church you were previously a member of, a list of community groups you may be interested in, and opportunities for service.</p>
+      <p><em>We are looking forward to getting to know you!</em></p>
+      <p style="margin-bottom:0">
+        <a class="btn" href="https://orthodoxpittsburgh.churchtrac.com/" target="_blank" rel="noopener">Open ChurchConnect</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== MINISTRIES ====================== -->
+<section class="alt" id="ministries">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Life Together</p>
+      <h2>Ministries</h2>
+    </div>
+
+    <div class="grid four">
+      <div class="min-col">
+        <h4>Pastoral &amp; Council</h4>
+        <ul>
+          <li><span class="m-role">Rector</span><span class="m-name">Fr Thomas Soroka</span></li>
+          <li><span class="m-role">Attached</span><span class="m-name">Dn Luke Loboda</span></li>
+          <li><span class="m-role">Attached</span><span class="m-name">Dn John Skowron</span></li>
+          <li><span class="m-role">President</span><span class="m-name">Melissa Graff</span></li>
+          <li><span class="m-role">Treasurer</span><span class="m-name">Kristie Mertz</span></li>
+          <li><span class="m-role">Financial Secretary</span><span class="m-name">Rachel Hauenschild</span></li>
+          <li><span class="m-role">Recording Secretary</span><span class="m-name">Deborah Burgess</span></li>
+          <li><span class="m-role">Council Members</span><span class="m-name">Bob Bartko &middot; Bill Lewis</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Liturgical</h4>
+        <ul>
+          <li><span class="m-role">Choir Directors</span><span class="m-name">Rdr James Wargo &amp; Danielle Bartko</span></li>
+          <li><span class="m-role">Youth Choir</span><span class="m-name">Danielle Bartko</span></li>
+          <li><span class="m-role">Director Emerita</span><span class="m-name">Doris Wasilko</span></li>
+          <li><span class="m-role">Bell Ringing</span><span class="m-name">Rick Porter</span></li>
+          <li><span class="m-role">Altar Servers</span><span class="m-name">Dn Luke Loboda</span></li>
+          <li><span class="m-role">Altar Beautification</span><span class="m-name">Deborah Burgess &amp; Karlie Lewis</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Outreach</h4>
+        <ul>
+          <li><span class="m-role">Social Aid</span><span class="m-name">Mka Ashley Loboda</span></li>
+          <li><span class="m-role">Pro-Life Ministry</span><span class="m-name">Mka Joni Soroka</span></li>
+          <li><span class="m-role">Food Pantry</span><span class="m-name">Mka Kate Skowron</span></li>
+          <li><span class="m-role">Shut-ins</span><span class="m-name">Leslie Wokutch</span></li>
+          <li><span class="m-role">Food Festival &amp; Picnic</span><span class="m-name">Clayton Harris &amp; Richard Blaha</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Education &amp; Reference</h4>
+        <ul>
+          <li><span class="m-role">Adult Education</span><span class="m-name">Fr Thomas Soroka</span></li>
+          <li><span class="m-role">Church School Curriculum</span><span class="m-name">Dn Luke Loboda</span></li>
+          <li><span class="m-role">Church School Coordinator</span><span class="m-name">Mka Joni Soroka</span></li>
+          <li><span class="m-role">Lending Library</span><span class="m-name">Dr Kristie Mertz</span></li>
+          <li><span class="m-role">Parish Historians</span><span class="m-name">Dr Kristie Mertz &amp; Marsha Wasilko</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Hospitality</h4>
+        <ul>
+          <li><span class="m-role">Prosphora</span><span class="m-name">Deborah Burgess</span></li>
+          <li><span class="m-role">Special Events</span><span class="m-name">Clayton Harris</span></li>
+          <li><span class="m-role">Sisterhood / Kitchen</span><span class="m-name">Susan Porter</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Inreach</h4>
+        <ul>
+          <li><span class="m-role">Membership Services</span><span class="m-name">Dn Luke Loboda</span></li>
+          <li><span class="m-role">Greeters</span><span class="m-name">Jan Widel</span></li>
+          <li><span class="m-role">Orthodox Mothers&rsquo; Group</span><span class="m-name">Mka Kate Skowron</span></li>
+          <li><span class="m-role">Men&rsquo;s Group</span><span class="m-name">Dn Luke Loboda</span></li>
+          <li><span class="m-role">Women&rsquo;s Group</span><span class="m-name">Jessica Krchmar</span></li>
+          <li><span class="m-role">Teen Fellowship</span><span class="m-name">Mka Ashley Loboda</span></li>
+          <li><span class="m-role">Prayer Group</span><span class="m-name">Dn John Skowron</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Communications</h4>
+        <ul>
+          <li><span class="m-role">Coordinator</span><span class="m-name">Fr Thomas Soroka</span></li>
+          <li><span class="m-role">Photography</span><span class="m-name">Dr Christopher Humphrey</span></li>
+          <li><span class="m-role">Social Media</span><span class="m-name">Deborah Burgess &amp; Rachel Hauenschild</span></li>
+          <li><span class="m-role">Livestream</span><span class="m-name">Annaliese Mertz, Nathanael Cassidy &amp; Theodor Mertz</span></li>
+        </ul>
+      </div>
+      <div class="min-col">
+        <h4>Facilities</h4>
+        <ul>
+          <li><span class="m-role">Icon Renewal Project</span><span class="m-name">Fr Thomas Soroka</span></li>
+          <li><span class="m-role">Capital Projects</span><span class="m-name">Fr Thomas Soroka</span></li>
+          <li><span class="m-role">Groundskeeping</span><span class="m-name">Paul Fuller</span></li>
+          <li><span class="m-role">Maintenance</span><span class="m-name">Bob Bartko</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CONTACT / DIRECTIONS ====================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Visit Us</p>
+      <h2>Contact &amp; Directions</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <ul class="info-list">
+          <li>
+            <div class="k">Address</div>
+            <div class="v">St Nicholas Orthodox Church<br>320 Munson Avenue<br>McKees Rocks, PA 15136-2722</div>
+          </li>
+          <li>
+            <div class="k">Phone</div>
+            <div class="v"><a href="tel:+14123311053">412-331-1053</a></div>
+          </li>
+          <li>
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:info@orthodoxpittsburgh.org">info@orthodoxpittsburgh.org</a></div>
+          </li>
+          <li>
+            <div class="k">Jurisdiction</div>
+            <div class="v">A parish of the <a href="https://oca.org/" target="_blank" rel="noopener">Orthodox Church in America</a></div>
+          </li>
+        </ul>
+
+        <div class="directions">
+          <h4>From Pittsburgh</h4>
+          <p>Take Rt. 65 north to the McKees Rocks Bridge. Take the Helen St. exit ramp off the bridge, turn left at the bottom onto Helen St. At the first stop sign, turn right onto Ella St. At the next stop sign, turn right onto Munson Ave. The church is on the right.</p>
+          <h4>From the South</h4>
+          <p>Take Rt. 51 north to McKees Rocks. Turn right onto the McKees Rocks Bridge from Rt. 51. Take the Helen St. exit ramp, turn right at the bottom onto Helen St. At the first stop sign, turn right onto Ella St. At the next stop sign, turn right onto Munson Ave. The church is on the right.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-embed">
+          <iframe
+            title="Map to St Nicholas Orthodox Church"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=k&z=18&output=embed">
+          </iframe>
+        </div>
+        <p style="margin-top:18px">
+          <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=320+Munson+Avenue,+McKees+Rocks,+PA+15136" target="_blank" rel="noopener">Get Driving Directions</a>
+        </p>
+        <figure class="photo-figure" style="margin-top:18px;margin-bottom:0">
+          <img src="assets/church-building.jpg" width="479" height="720" loading="lazy"
+               alt="The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania." />
+          <figcaption>Look for us on Munson Avenue &mdash; all are welcome.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="foot-brand">
+        <b>St Nicholas Orthodox Church</b>
+        <p>320 Munson Avenue &middot; McKees Rocks, PA 15136<br>
+        412-331-1053 &middot; <a href="mailto:info@orthodoxpittsburgh.org">info@orthodoxpittsburgh.org</a></p>
+        <div class="socials">
+          <a href="https://www.facebook.com/orthodoxpittsburgh/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h2.7l.4-3H13V9.1c0-.9.3-1.5 1.6-1.5H16V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.8 1.4-3.8 3.9V11H7.5v3H10v8h3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/orthodoxpittsburgh" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.3-.4-4.8c-.2-.9-.9-1.5-1.7-1.7C19.4 5 12 5 12 5s-7.4 0-8.9.5c-.8.2-1.5.8-1.7 1.7C1 8.7 1 12 1 12s0 3.3.4 4.8c.2.9.9 1.5 1.7 1.7C4.6 19 12 19 12 19s7.4 0 8.9-.5c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.8.4-4.8zM10 15V9l5 3-5 3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/orthodoxpittsburgh/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.3s0-2.1-.1-3.3c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.3-8.3a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">Our Parish</a></li>
+          <li><a href="#faith">Worship</a></li>
+          <li><a href="#schedule">Service Schedule</a></li>
+          <li><a href="#calendar">Parish Calendar</a></li>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#history">Our History</a></li>
+          <li><a href="#ministries">Ministries</a></li>
+          <li><a href="#giving">Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#calendar">Parish Calendar</a></li>
+          <li><a href="https://orthodoxpittsburgh.org/podcasts.html" target="_blank" rel="noopener">Podcasts</a></li>
+          <li><a href="https://orthodoxpittsburgh.org/bulletins.html" target="_blank" rel="noopener">Bulletins</a></li>
+          <li><a href="https://orthodoxpittsburgh.org/livestream.html" target="_blank" rel="noopener">Livestream</a></li>
+          <li><a href="https://orthodoxpittsburgh.churchtrac.com/" target="_blank" rel="noopener">Member Log-in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; <span id="yr"></span> St Nicholas Orthodox Church &middot; A parish of the Orthodox Church in America</span>
+      <span>McKees Rocks, Pennsylvania</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Carousels: auto-advance, arrows + dots. Images are centered and
+  // letterboxed within a fixed container (object-fit: contain in CSS).
+  document.querySelectorAll('.carousel').forEach(function (c) {
+    var slides = c.querySelector('.cslides');
+    var imgs = Array.prototype.slice.call(c.querySelectorAll('.cslides img'));
+    if (!imgs.length || !slides) return;
+
+    imgs[0].classList.add('active');
+    if (imgs.length < 2) return;
+
+    var idx = 0, timer, btns;
+    var iv = parseInt(c.getAttribute('data-interval'), 10) || 5000;
+
+    function show(i) {
+      i = (i + imgs.length) % imgs.length;
+      imgs.forEach(function (im, j) { im.classList.toggle('active', j === i); });
+      btns.forEach(function (b, j) { b.classList.toggle('active', j === i); });
+      idx = i;
+    }
+    function reset() {
+      clearInterval(timer);
+      timer = setInterval(function () { show(idx + 1); }, iv);
+    }
+
+    var prev = document.createElement('button');
+    prev.type = 'button'; prev.className = 'carrow prev';
+    prev.setAttribute('aria-label', 'Previous image');
+    prev.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    prev.addEventListener('click', function () { show(idx - 1); reset(); });
+
+    var next = document.createElement('button');
+    next.type = 'button'; next.className = 'carrow next';
+    next.setAttribute('aria-label', 'Next image');
+    next.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+    next.addEventListener('click', function () { show(idx + 1); reset(); });
+
+    var dots = document.createElement('div');
+    dots.className = 'cdots';
+    btns = imgs.map(function (im, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show image ' + (i + 1));
+      b.addEventListener('click', function () { show(i); reset(); });
+      dots.appendChild(b);
+      return b;
+    });
+
+    c.appendChild(prev);
+    c.appendChild(next);
+    c.appendChild(dots);
+    show(0);
+    reset();
+  });
+</script>
+</body>
+</html>
