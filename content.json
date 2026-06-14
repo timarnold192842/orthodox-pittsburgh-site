@@ -1,13 +1,37 @@
 {
   "nav": [
-    { "label": "Parish", "href": "#about" },
-    { "label": "Worship", "href": "#faith" },
-    { "label": "Services", "href": "#schedule" },
-    { "label": "Calendar", "href": "#calendar" },
-    { "label": "Photos", "href": "#gallery" },
-    { "label": "Leadership", "href": "#clergy" },
-    { "label": "Visit", "href": "#contact" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "Worship",
+      "href": "#faith"
+    },
+    {
+      "label": "Parish",
+      "href": "#about"
+    },
+    {
+      "label": "Services",
+      "href": "#schedule"
+    },
+    {
+      "label": "Calendar",
+      "href": "#calendar"
+    },
+    {
+      "label": "Photos",
+      "href": "#gallery"
+    },
+    {
+      "label": "Leadership",
+      "href": "#clergy"
+    },
+    {
+      "label": "Visit",
+      "href": "#contact"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
     "eyebrow": "A Parish of the Orthodox Church in America",
@@ -24,20 +48,56 @@
     ]
   },
   "scheduleLiturgical": [
-    { "name": "Saturday Great Vespers with Cathedral Vigil", "time": "5:00 pm" },
-    { "name": "Sunday Divine Liturgy", "time": "10:00 am" },
-    { "name": "Daily Matins every Tuesday and Thursday", "time": "9:00 am" },
-    { "name": "Daily Vespers on second and fourth Wednesdays <small>(before Bible Study)</small>", "time": "6:30 pm" },
-    { "name": "Feast Day Vespers", "time": "7:00 pm" },
-    { "name": "Feast Day Divine Liturgy", "time": "9:30 am" },
-    { "name": "Lenten Wednesday Presanctified Liturgy", "time": "6:00 pm" },
-    { "name": "Lenten Daily Vespers on Monday", "time": "5:00 pm" },
-    { "name": "Lenten Friday Services", "time": "7:00 pm" }
+    {
+      "name": "Saturday Great Vespers with Cathedral Vigil",
+      "time": "5:00 pm"
+    },
+    {
+      "name": "Sunday Divine Liturgy",
+      "time": "10:00 am"
+    },
+    {
+      "name": "Daily Matins every Tuesday and Thursday",
+      "time": "9:00 am"
+    },
+    {
+      "name": "Daily Vespers on second and fourth Wednesdays <small>(before Bible Study)</small>",
+      "time": "6:30 pm"
+    },
+    {
+      "name": "Feast Day Vespers",
+      "time": "7:00 pm"
+    },
+    {
+      "name": "Feast Day Divine Liturgy",
+      "time": "9:30 am"
+    },
+    {
+      "name": "Lenten Wednesday Presanctified Liturgy",
+      "time": "6:00 pm"
+    },
+    {
+      "name": "Lenten Daily Vespers on Monday",
+      "time": "5:00 pm"
+    },
+    {
+      "name": "Lenten Friday Services",
+      "time": "7:00 pm"
+    }
   ],
   "scheduleEducation": [
-    { "name": "Sunday Morning Adult Education on first and third Sundays", "time": "9:15 am" },
-    { "name": "Sunday Church School at the end of Divine Liturgy", "time": "&mdash;" },
-    { "name": "Bible Study on second and fourth Wednesdays", "time": "7:00 pm" }
+    {
+      "name": "Sunday Morning Adult Education on first and third Sundays",
+      "time": "9:15 am"
+    },
+    {
+      "name": "Sunday Church School at the end of Divine Liturgy",
+      "time": "&mdash;"
+    },
+    {
+      "name": "Bible Study on second and fourth Wednesdays",
+      "time": "7:00 pm"
+    }
   ],
   "leadership": [
     {
@@ -82,5 +142,373 @@
       "email": "choirdirector@orthodoxpittsburgh.org",
       "bio": "Danielle Bartko is a native of New Jersey and a life-long Orthodox Christian from the Carpatho-Rusyn tradition. She has directed choirs at three different parishes in Pennsylvania and was a cantor in both Pennsylvania and New Jersey. She has a B.A. in Biology and a minor in music from Lafayette College and a teaching certificate from DeSales University with a focus on math and science. She and has taught at both in-person and online Orthodox Christian schools. She currently is a home-schooling mom and online educator at Saint Raphael School, and is married with two children."
     }
-  ]
+  ],
+  "about": {
+    "eyebrow": "Parish",
+    "heading": "We're a diverse people!",
+    "panoImage": "assets/parish-group.jpg",
+    "panoAlt": "The parish family of St Nicholas Orthodox Church gathered together before the iconostasis.",
+    "intro": "Our parish is made of people of many ages, backgrounds, and cultures that hold these things in common: love for God and love for each other. We are a parish for every person who is seeking to grow in Christ. Whether you have been Orthodox all of your life, you're new to the faith, or you're just seeking stability and truth, you have a home at St Nicholas.",
+    "paras": [
+      "While our parish has historical Russian and Slavic roots, you'll find that we fully embrace our mission here in America to bring the gospel to every nation, tribe, people, and language (<a href=\"https://www.blueletterbible.org/esv/rev/7/9/\" target=\"_blank\" rel=\"noopener\">Revelation 7:9</a>). English is our predominant language, but you'll hear numerous languages spoken by our parishioners and parish friends. Our parish is home to immigrants from Russia, Ukraine, Bulgaria, Romania, Japan, Germany, and other countries!",
+      "We have members who have moved to the greater Pittsburgh area from every part of the country. We have a large population of members who have embraced the ancient Orthodox Christian faith from many spiritual backgrounds and journeys."
+    ],
+    "iconImage": "assets/st-nicholas-novgorod-1294.jpg",
+    "iconCaption": "Our patron, St Nicholas the Wonderworker, Archbishop of Myra.<br>Icon by Alexa Petrov &middot; Novgorod, 1294 &middot; Public domain via <a href=\"https://commons.wikimedia.org/wiki/File:Nikola_from_1294.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a>",
+    "kidsImages": [
+      { "src": "assets/kids-1.jpg", "alt": "Children of the parish at St Nicholas." },
+      { "src": "assets/kids-2.jpg", "alt": "Young parishioners taking part in parish life." },
+      { "src": "assets/kids-3.jpg", "alt": "A child of the parish during a service." },
+      { "src": "assets/kids-4.jpg", "alt": "Children of St Nicholas together at the parish." },
+      { "src": "assets/kids-5.jpg", "alt": "Young members of St Nicholas enjoying parish life." },
+      { "src": "assets/kids-6.jpg", "alt": "Children taking part in the life of St Nicholas." },
+      { "src": "assets/kids-7.jpg", "alt": "Little ones of the St Nicholas parish family." }
+    ],
+    "kidsHeading": "We love kids!",
+    "kidsParas": [
+      "St Nicholas enthusiastically pursues our misson to nurture our precious children in the Orthodox Christian faith. From our church school students to the littlest one in arms, you'll find a friendly, welcoming atmosphere for children during our services. Our parents understand that it can be a blessed struggle to raise children properly in the Christian faith, and that includes worship! At St Nicholas you will find a supportive family to help.",
+      "<em>We are grateful to God for bringing you to visit us here today &mdash; we look forward to meeting you in person!</em>"
+    ]
+  },
+  "faith": {
+    "eyebrow": "Visitors",
+    "heading": "Your First Visit to an Orthodox Church",
+    "intro": "Orthodox worship can seem strange to someone who has never been to an Orthodox Church before. However, we belive that our worship must be in Spirit and in truth (<a href=\"https://www.blueletterbible.org/esv/jhn/4/24/\" target=\"_blank\" rel=\"noopener\">Jn 4:24</a>).",
+    "featureImage": "assets/church-interior-2.jpg",
+    "featureAlt": "The interior of St Nicholas Orthodox Church with its iconostasis and frescoes.",
+    "beliefs": [
+      {
+        "images": [
+          { "src": "assets/worship-2.jpg", "alt": "Clergy serving the Divine Liturgy at St Nicholas Orthodox Church." },
+          { "src": "assets/worship-4.jpg", "alt": "The faithful gathered for worship at St Nicholas." },
+          { "src": "assets/worship-1.jpg", "alt": "Standing in prayer during the Divine Liturgy." }
+        ],
+        "heading": "Our worship is Biblical",
+        "paras": [
+          "Orthodox worship is rich with scriptures &mdash; not just the reading of the scriptures, but from the hymns to the petitions, everything we do in worship is based on scripture. The Book of Psalms is often called the Hymnbook of the Church, and we sing and read a lot of them! Orthodox Christians often memorize many Psalms simply from hearing them so often in our worship services.",
+          "However, you'll not only hear scripture, you'll see it. The patterns of Orthodox worship, based in the Christian fulfillment of Jewish liturigical worship, is most fully a manifestation of descriptions we read about in the New Testament Letter to the Hebrews and in the Book of Revelation. We join into the worship that is eternally sung before the throne of God (<a href=\"https://www.blueletterbible.org/esv/isa/6/\" target=\"_blank\" rel=\"noopener\">Isaiah 6</a>).",
+          "You'll also see that Orthodox Christians stand a lot during worship. While there are chairs and pews, able-bodied Orthodox Christians prefer to stand in worship, because they are in the very Presence of God!"
+        ]
+      },
+      {
+        "images": [
+          { "src": "assets/baptism-1.jpg", "alt": "A baptism by full immersion at St Nicholas Orthodox Church." },
+          { "src": "assets/baptism-2.jpg", "alt": "The mystery of Holy Baptism celebrated at St Nicholas." },
+          { "src": "assets/baptism-3.jpg", "alt": "Receiving a new member through Baptism at St Nicholas." },
+          { "src": "assets/baptism-4.jpg", "alt": "The celebration of Holy Baptism at St Nicholas Orthodox Church." }
+        ],
+        "heading": "The Sacraments Give Us Life",
+        "paras": [
+          "We participate in the new life of the Kingdom of God through the sacraments (mysteries) by the power of the Holy Spirit. In Baptism, we die and rise with Christ (<a href=\"https://www.blueletterbible.org/esv/rom/6/\" target=\"_blank\" rel=\"noopener\">Romans 6</a>). In the Eucharist, we are sustained by Christ's Body and Blood (<a href=\"https://www.blueletterbible.org/esv/jhn/6/\" target=\"_blank\" rel=\"noopener\">John 6</a>). In Holy Anointing, our sins are forgiven for healing (<a href=\"https://www.blueletterbible.org/esv/jas/5/\" target=\"_blank\" rel=\"noopener\">James 5</a>). Each sacrament is the way faithful Orthodox Christians participate in the Divine Life given to us as a gift here and now, and as a foretaste of our eternal inheiritance."
+        ]
+      },
+      {
+        "images": [
+          { "src": "assets/icons-1.jpg", "alt": "Iconography of Christ adorning the interior of St Nicholas Orthodox Church." },
+          { "src": "assets/icons-2.jpg", "alt": "Holy icons venerated within St Nicholas." },
+          { "src": "assets/icons-6.jpg", "alt": "An icon at St Nicholas Orthodox Church." }
+        ],
+        "heading": "Icons",
+        "paras": [
+          "The most distinctive feature of Orthodox Churches is their use of iconography or holy images. Simply put, icons testify to the truth of the incarnation of Christ. He became a man, and therefore He can be pictured. Orthodox Christians would say, in fact, that He must be pictured. Otherwise, we can easily forget that He became a real human for our sake, and that He came to redeem humanity. He is, indeed, the God-Man, fully divine as the eternal Word of God (<a href=\"https://www.blueletterbible.org/esv/jhn/1/\" target=\"_blank\" rel=\"noopener\">John 1</a>). But He became truly human, like us in everything but sin (<a href=\"https://www.blueletterbible.org/esv/heb/4/\" target=\"_blank\" rel=\"noopener\">Hebrews 4</a>).",
+          "We kiss the icons of Christ, His Mother, and the Saints, not out of idolatry (God forbid!), but out of honor. The honor we show passes to the person whose image is depicted."
+        ]
+      },
+      {
+        "images": [
+          { "src": "assets/church-interior-4.jpg", "alt": "Parishioners standing in worship within St Nicholas Orthodox Church." },
+          { "src": "assets/church-interior-3.jpg", "alt": "The faithful at prayer inside St Nicholas." },
+          { "src": "assets/church-interior-6.jpg", "alt": "The faithful gathered in prayer within St Nicholas Orthodox Church." }
+        ],
+        "heading": "The Sign of the Cross",
+        "paras": [
+          "You'll see Orthodox Christians trace the sign of the cross on their bodies frequently. This is the traditional way in which we bless ourselves, and in which we are blessed by others. Making the sign of the cross is one of the most ancient practices of Christians, and it is the sign par excellence of Christianity."
+        ]
+      },
+      {
+        "images": [
+          { "src": "assets/singing-1.jpg", "alt": "The choir leading the unaccompanied singing at St Nicholas Orthodox Church." },
+          { "src": "assets/singing-2.jpg", "alt": "A cantor singing during worship at St Nicholas." },
+          { "src": "assets/singing-3.jpg", "alt": "Singing the hymns of the Church at St Nicholas." }
+        ],
+        "heading": "Singing",
+        "paras": [
+          "Orthodox Christians love to sing! Our singing is always unaccompanied by any musical instruments. This is another sign that our worship is joined to the heavenly choirs with the angels and all the saints who gather around the throne of God and of the Lamb."
+        ]
+      }
+    ],
+    "joinHeading": "Join in!",
+    "joinPara": "We want you to feel welcomed during our services. While Orthodox worship may seem somewhat unfamiliar, we believe fully and without reservation that Orthodox worship is the way worship is supposed to look like. This is worship as it was always meant to be. Discovering it for the first time has been an overwhelming sense of joy for people around the world, and we hope you'll come to discover that too.",
+    "joinButtonLabel": "Plan Your Visit &amp; Directions",
+    "joinButtonHref": "#contact"
+  },
+  "schedule": {
+    "eyebrow": "Liturgical Services &amp; Educational Offerings",
+    "heading": "Service schedule",
+    "intro": "Please consult the calendar for the latest schedule and any changes that may occur.",
+    "liturgicalHeading": "Our regular liturgical service times are:",
+    "educationHeading": "Our regular educational offering times are:",
+    "note": "Check the online calendar for any special classes, lectures, and offerings.",
+    "calendarButtonLabel": "View Parish Calendar",
+    "calendarButtonHref": "#calendar"
+  },
+  "calendar": {
+    "eyebrow": "Parish Calendar",
+    "heading": "Upcoming events",
+    "intro": "Liturgical services, classes, and parish events. Please consult the calendar for the latest schedule and any changes that may occur.",
+    "agendaSrc": "https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff",
+    "monthSrc": "https://calendar.google.com/calendar/embed?src=info%40stnicholas-oca.org&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showPrint=0&showCalendars=0&showTz=0&wkst=1&bgcolor=%23ffffff",
+    "fullButtonLabel": "Open Full Calendar",
+    "fullButtonHref": "https://orthodoxpittsburgh.org/parishcalendar.html"
+  },
+  "quote": {
+    "text": "St. Nicholas Church will strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.",
+    "cite": "Our Mission"
+  },
+  "gallery": {
+    "eyebrow": "Parish Life",
+    "heading": "Come and see",
+    "intro": "From the Divine Liturgy to fellowship, festivals, and service to our neighbors &mdash; a glimpse of the people of St Nicholas. Many more photos, including images from our parish history, live on our Facebook page.",
+    "panoImage": "assets/parish-group.jpg",
+    "panoAlt": "The parish family of St Nicholas gathered before the iconostasis with their archbishop.",
+    "images": [
+      { "src": "assets/worship-4.jpg", "alt": "The faithful gathered for the Divine Liturgy at St Nicholas." },
+      { "src": "assets/baptism-2.jpg", "alt": "A baptism celebrated at St Nicholas Orthodox Church." },
+      { "src": "assets/fellowship-3.jpg", "alt": "Parishioners gathered together in fellowship." },
+      { "src": "assets/church-interior-3.jpg", "alt": "The frescoed interior and dome of St Nicholas Orthodox Church." },
+      { "src": "assets/icons-1.jpg", "alt": "Icons venerated within St Nicholas Orthodox Church." },
+      { "src": "assets/fellowship-1.jpg", "alt": "Parishioners enjoying a parish gathering." },
+      { "src": "assets/singing-1.jpg", "alt": "The choir singing during worship at St Nicholas." },
+      { "src": "assets/food-1.jpg", "alt": "Preparing food together at a St Nicholas parish event." },
+      { "src": "assets/fellowship-4.jpg", "alt": "The parish community sharing time together." }
+    ],
+    "fbButtonLabel": "Browse More Photos on Facebook",
+    "fbButtonHref": "https://www.facebook.com/OrthodoxPittsburgh/photos",
+    "fbEmbedSrc": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOrthodoxPittsburgh&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false"
+  },
+  "history": {
+    "eyebrow": "Our History",
+    "heading": "Established 1914",
+    "intro": "A complete history of our parish was published in 2014 for our centennial by Dr Kristie Bosko Mertz and can be found here.",
+    "colLeft": [
+      "Our parish has a long and rich history, having been established in 1914 by Slavic immigrants who lived in the area.",
+      "By 1913, numerous families in McKees Rocks were traveling by boat every Sunday to attend the only Orthodox church available to them, on the other side of the Ohio River! But their dedication to God and their industrious ways led them to build a beautiful church to the glory of God. Our current building was dedicated in 1917.",
+      "St Nicholas welcomed many new families, especially during the great immigration in the 1920's and 1930's, who had made the arduous journey from Europe to their new home in America. Much of Pittsburgh's then flourishing industry was built on the hard work and dedication of these people."
+    ],
+    "colRight": [
+      "As time has passed, the faces and names have changed, but our dedication to and love of God has remained. Today, St Nicholas Church is made up of people from every walk of life, from every area of the Pittsburgh region, and from many nationalities. We are the proud home of many families who left the oppression of the former Soviet Union, some of them jailed for anti-Soviet activities, and persecuted for the faith. Our parish is also the new spiritual home to many people who have recently entered the Orthodox faith &mdash; former Roman Catholics, Protestants, and Pagans &mdash; as well as those who used to embrace new age thought and atheism.",
+      "<em>Come and join us to experience the beauty and majesty of Orthodox worship and the warmth of the people of St Nicholas.</em>"
+    ],
+    "images": [
+      { "src": "assets/history-1.jpg", "alt": "Historic photograph from the early years of St Nicholas Orthodox Church." },
+      { "src": "assets/history-2.jpg", "alt": "Historic photograph of the people of St Nicholas Orthodox Church." },
+      { "src": "assets/history-3.jpg", "alt": "Historic photograph from the parish archives of St Nicholas." }
+    ],
+    "carouselParas": [
+      "For more than a century, generation after generation has gathered in this place to glorify God. The photographs change, but the faith endures."
+    ],
+    "fbLabel": "More Historic Photos on Facebook",
+    "fbHref": "https://www.facebook.com/OrthodoxPittsburgh/posts/pfbid031oej8Nv9bdnHcWTTUmVMYZPJJBbffL9zD9jQzr7bfa1L6jjArQ9iqGYAeRHFAxCMl"
+  },
+  "giving": {
+    "eyebrow": "Support &amp; Stewardship",
+    "heading": "Giving",
+    "intro": "Please use one of the links below to make a one-time or recurring donation to support the ministries of St Nicholas! To read about our new Roof &amp; Dome Renovation Project, <a href=\"https://orthodoxpittsburgh.org/domerestoration\" target=\"_blank\" rel=\"noopener\">click here</a>.",
+    "panoImage": "assets/parish-group.jpg",
+    "panoAlt": "The parish family of St Nicholas Orthodox Church gathered together.",
+    "panoCaption": "The parish family of St Nicholas.",
+    "oneTimeLabel": "One-Time Donation",
+    "oneTimeHref": "https://donate.stripe.com/4gw16p9ZT99C0tGaEE",
+    "recurringLabel": "Recurring Donation",
+    "recurringHref": "https://orthodoxpittsburgh.churchtrac.com/give",
+    "stewardshipHeading": "Stewardship at St Nicholas",
+    "stewardshipParas": [
+      "<em>&ldquo;He who sows sparingly will also reap sparingly, and he who sows bountifully will also reap bountifully. So let each one give as he purposes in his heart, not grudgingly or of necessity; for God loves a cheerful giver.&rdquo;</em> (<a href=\"https://www.blueletterbible.org/esv/2co/9/6/\" target=\"_blank\" rel=\"noopener\">2 Cor 9:6&ndash;7</a>)",
+      "Parishioners at St Nicholas are encouraged to be good stewards of the time, talent, and treasure God has bestowed on them. This stewardship involves acknowledging that &ldquo;every good gift and every perfect gift is from above, and comes down from the Father of lights,&rdquo; (<a href=\"https://www.blueletterbible.org/esv/jas/1/17/\" target=\"_blank\" rel=\"noopener\">James 1:17</a>) and then taking a first portion of those gifts to offer them back to God in thanksgiving. In November of each year, parishioners are encouraged to plan out their offerings for the following year so that the parish can continue the work in the community which God has planted in our midst."
+    ]
+  },
+  "visit": {
+    "eyebrow": "How to Become Orthodox",
+    "heading": "Becoming Orthodox",
+    "intro": "Outlined below are the basic steps to become an Orthodox Christian. However, everyone's journey will look a bit different. Each step assumes that the inquirer has been in regular contact with Fr Thomas and that he has given you a blessing to move through each stage.",
+    "images": [
+      { "src": "assets/catechumens-1.jpg", "alt": "Catechumens preparing for reception into the Orthodox Church at St Nicholas." },
+      { "src": "assets/baptism-4.jpg", "alt": "The celebration of Holy Baptism at St Nicholas Orthodox Church." },
+      { "src": "assets/baptism-3.jpg", "alt": "Reception of a new member through Holy Baptism at St Nicholas." },
+      { "src": "assets/baptism-1.jpg", "alt": "A baptism by full immersion at St Nicholas Orthodox Church." }
+    ],
+    "steps": [
+      {
+        "heading": "Attend church services regularly and often",
+        "paras": [
+          "When we call ourselves \"Orthodox,\" we automatically define ourselves by our communal worship practices. Orthodoxy means the \"right glorification\" or \"right worship\" of God. Readings books, watching videos, having theological disucssions, and attending classes should ultimately lead one to stand before God in thanksgiving and worship for everything He has done and continues to do for us."
+        ]
+      },
+      {
+        "heading": "Formally enroll into the Catechumenate Program",
+        "paras": [
+          "After a period of discernment, and with the blessing of Fr Thomas, the inquirer will be formally enrolled among the catechumens. This means that the inquirer has professed an intention to become a member of the Orthodox Church and is undergoing instruction in the essentials of the Orthodox Christian faith.",
+          "Both a spring and fall cohort will have opportunities for the same instruction. Catechumens must complete a minimum of eight class sessions on the fundamental doctrines and practices of the Orthodox Christian faith as partial fulfillment of the catechumenate. The church calendar publicizes the date and location of all classes. Please see your parish ChurchConnect account or our website for our events calendar.",
+          "Other aspects of catechumen preparation include formation in Orthodox prayer and fasting, participation in charitable service to others, and social integration into the parish community. More information about this appears on the Preparation for Catechumens form on your ChurchConnect account."
+        ]
+      },
+      {
+        "heading": "Reception into the Orthodox Church",
+        "paras": [
+          "After successful completion of the above requirements, a free and unconstrained intention to enter fully into the eucharistic communion of Orthodox Christianity, and with the blessing of Fr Thomas, a date will be set for formal reception into the Orthodox Church.",
+          "The manner of reception, according to the ancient Tradition of the Church, will depend on a number of factors and determined in consultation with Fr Thomas."
+        ]
+      }
+    ],
+    "memberHeading": "How to Become a Member of St Nicholas",
+    "memberParas": [
+      "This page is for interested persons who are already Orthodox. If you are not Orthodox, please see our Becoming Orthodox page.",
+      "St Nicholas is a vibrant and active parish of dedicated Orthodox Christians. If you are Orthodox, you have visited our parish, and you would like to become a member, there are a few things you should do:",
+      "1. Please introduce yourself to one of our members and to Father Thomas, Deacon Luke, or Deacon John at your next visit, if you haven't already done so.",
+      "2. Please go to our Church Connect page and create an account. (Your account can take up to 24 hours to be approved.)",
+      "3. Once logged into your account, you will be able to access our Parish Application Form. You will be asked to provide your contact information, the Orthodox Church you were previously a member of, a list of community groups you may be interested in, and opportunities for service.",
+      "<em>We are looking forward to getting to know you!</em>"
+    ],
+    "memberButtonLabel": "Open ChurchConnect",
+    "memberButtonHref": "https://orthodoxpittsburgh.churchtrac.com/"
+  },
+  "ministries": {
+    "eyebrow": "Life Together",
+    "heading": "Ministries",
+    "columns": [
+      {
+        "title": "Pastoral &amp; Council",
+        "rows": [
+          { "role": "Rector", "name": "Fr Thomas Soroka" },
+          { "role": "Attached", "name": "Dn Luke Loboda" },
+          { "role": "Attached", "name": "Dn John Skowron" },
+          { "role": "President", "name": "Melissa Graff" },
+          { "role": "Treasurer", "name": "Kristie Mertz" },
+          { "role": "Financial Secretary", "name": "Rachel Hauenschild" },
+          { "role": "Recording Secretary", "name": "Deborah Burgess" },
+          { "role": "Council Members", "name": "Bob Bartko &middot; Bill Lewis" }
+        ]
+      },
+      {
+        "title": "Liturgical",
+        "rows": [
+          { "role": "Choir Directors", "name": "Rdr James Wargo &amp; Danielle Bartko" },
+          { "role": "Youth Choir", "name": "Danielle Bartko" },
+          { "role": "Director Emerita", "name": "Doris Wasilko" },
+          { "role": "Bell Ringing", "name": "Rick Porter" },
+          { "role": "Altar Servers", "name": "Dn Luke Loboda" },
+          { "role": "Altar Beautification", "name": "Deborah Burgess &amp; Karlie Lewis" }
+        ]
+      },
+      {
+        "title": "Outreach",
+        "rows": [
+          { "role": "Social Aid", "name": "Mka Ashley Loboda" },
+          { "role": "Pro-Life Ministry", "name": "Mka Joni Soroka" },
+          { "role": "Food Pantry", "name": "Mka Kate Skowron" },
+          { "role": "Shut-ins", "name": "Leslie Wokutch" },
+          { "role": "Food Festival &amp; Picnic", "name": "Clayton Harris &amp; Richard Blaha" }
+        ]
+      },
+      {
+        "title": "Education &amp; Reference",
+        "rows": [
+          { "role": "Adult Education", "name": "Fr Thomas Soroka" },
+          { "role": "Church School Curriculum", "name": "Dn Luke Loboda" },
+          { "role": "Church School Coordinator", "name": "Mka Joni Soroka" },
+          { "role": "Lending Library", "name": "Dr Kristie Mertz" },
+          { "role": "Parish Historians", "name": "Dr Kristie Mertz &amp; Marsha Wasilko" }
+        ]
+      },
+      {
+        "title": "Hospitality",
+        "rows": [
+          { "role": "Prosphora", "name": "Deborah Burgess" },
+          { "role": "Special Events", "name": "Clayton Harris" },
+          { "role": "Sisterhood / Kitchen", "name": "Susan Porter" }
+        ]
+      },
+      {
+        "title": "Inreach",
+        "rows": [
+          { "role": "Membership Services", "name": "Dn Luke Loboda" },
+          { "role": "Greeters", "name": "Jan Widel" },
+          { "role": "Orthodox Mothers&rsquo; Group", "name": "Mka Kate Skowron" },
+          { "role": "Men&rsquo;s Group", "name": "Dn Luke Loboda" },
+          { "role": "Women&rsquo;s Group", "name": "Jessica Krchmar" },
+          { "role": "Teen Fellowship", "name": "Mka Ashley Loboda" },
+          { "role": "Prayer Group", "name": "Dn John Skowron" }
+        ]
+      },
+      {
+        "title": "Communications",
+        "rows": [
+          { "role": "Coordinator", "name": "Fr Thomas Soroka" },
+          { "role": "Photography", "name": "Dr Christopher Humphrey" },
+          { "role": "Social Media", "name": "Deborah Burgess &amp; Rachel Hauenschild" },
+          { "role": "Livestream", "name": "Annaliese Mertz, Nathanael Cassidy &amp; Theodor Mertz" }
+        ]
+      },
+      {
+        "title": "Facilities",
+        "rows": [
+          { "role": "Icon Renewal Project", "name": "Fr Thomas Soroka" },
+          { "role": "Capital Projects", "name": "Fr Thomas Soroka" },
+          { "role": "Groundskeeping", "name": "Paul Fuller" },
+          { "role": "Maintenance", "name": "Bob Bartko" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Visit Us",
+    "heading": "Contact &amp; Directions",
+    "address": "St Nicholas Orthodox Church<br>320 Munson Avenue<br>McKees Rocks, PA 15136-2722",
+    "phone": "412-331-1053",
+    "phoneHref": "tel:+14123311053",
+    "email": "info@orthodoxpittsburgh.org",
+    "jurisdiction": "A parish of the <a href=\"https://oca.org/\" target=\"_blank\" rel=\"noopener\">Orthodox Church in America</a>",
+    "directions": [
+      {
+        "heading": "From Pittsburgh",
+        "body": "Take Rt. 65 north to the McKees Rocks Bridge. Take the Helen St. exit ramp off the bridge, turn left at the bottom onto Helen St. At the first stop sign, turn right onto Ella St. At the next stop sign, turn right onto Munson Ave. The church is on the right."
+      },
+      {
+        "heading": "From the South",
+        "body": "Take Rt. 51 north to McKees Rocks. Turn right onto the McKees Rocks Bridge from Rt. 51. Take the Helen St. exit ramp, turn right at the bottom onto Helen St. At the first stop sign, turn right onto Ella St. At the next stop sign, turn right onto Munson Ave. The church is on the right."
+      }
+    ],
+    "mapSrc": "https://www.google.com/maps?q=320+Munson+Avenue,+McKees+Rocks,+PA+15136&t=k&z=18&output=embed",
+    "directionsButtonLabel": "Get Driving Directions",
+    "directionsButtonHref": "https://www.google.com/maps/dir/?api=1&destination=320+Munson+Avenue,+McKees+Rocks,+PA+15136",
+    "photoImage": "assets/church-building.jpg",
+    "photoAlt": "The exterior of St Nicholas Orthodox Church in McKees Rocks, Pennsylvania.",
+    "photoCaption": "Look for us on Munson Avenue &mdash; all are welcome."
+  },
+  "footer": {
+    "brand": "St Nicholas Orthodox Church",
+    "address": "320 Munson Avenue &middot; McKees Rocks, PA 15136<br>412-331-1053 &middot; <a href=\"mailto:info@orthodoxpittsburgh.org\">info@orthodoxpittsburgh.org</a>",
+    "socials": [
+      { "label": "Facebook", "href": "https://www.facebook.com/orthodoxpittsburgh/" },
+      { "label": "YouTube", "href": "https://www.youtube.com/orthodoxpittsburgh" },
+      { "label": "Instagram", "href": "https://www.instagram.com/orthodoxpittsburgh/" }
+    ],
+    "exploreLinks": [
+      { "label": "Our Parish", "href": "#about" },
+      { "label": "Worship", "href": "#faith" },
+      { "label": "Service Schedule", "href": "#schedule" },
+      { "label": "Parish Calendar", "href": "#calendar" },
+      { "label": "Photos", "href": "#gallery" },
+      { "label": "Our History", "href": "#history" },
+      { "label": "Ministries", "href": "#ministries" },
+      { "label": "Giving", "href": "#giving" }
+    ],
+    "connectLinks": [
+      { "label": "Parish Calendar", "href": "#calendar" },
+      { "label": "Podcasts", "href": "https://orthodoxpittsburgh.org/podcasts.html" },
+      { "label": "Bulletins", "href": "https://orthodoxpittsburgh.org/bulletins.html" },
+      { "label": "Livestream", "href": "https://orthodoxpittsburgh.org/livestream.html" },
+      { "label": "Member Log-in", "href": "https://orthodoxpittsburgh.churchtrac.com/" }
+    ]
+  }
 }

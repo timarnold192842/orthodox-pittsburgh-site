@@ -81,3 +81,297 @@ collections:
               - { label: "Name", name: name, widget: string }
               - { label: "Email", name: email, widget: string, required: false }
               - { label: "Biography", name: bio, widget: text }
+
+          - label: "Parish (About) Section"
+            name: about
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Banner photo", name: panoImage, widget: image }
+              - { label: "Banner photo — description", name: panoAlt, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - label: "Body paragraphs"
+                name: paras
+                widget: list
+                hint: "Basic HTML links are allowed."
+                field: { label: "Paragraph", name: text, widget: text }
+              - { label: "Patron icon image", name: iconImage, widget: image }
+              - { label: "Icon caption", name: iconCaption, widget: text, hint: "Basic HTML is allowed." }
+              - label: "Children photos (slideshow)"
+                name: kidsImages
+                widget: list
+                label_singular: "Photo"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Photo", name: src, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - { label: "Children heading", name: kidsHeading, widget: string }
+              - label: "Children paragraphs"
+                name: kidsParas
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+
+          - label: "First Visit (Worship) Section"
+            name: faith
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Feature image", name: featureImage, widget: image }
+              - { label: "Feature image — description", name: featureAlt, widget: string }
+              - label: "Beliefs / topics"
+                name: beliefs
+                widget: list
+                label_singular: "Topic"
+                summary: "{{fields.heading}}"
+                collapsed: true
+                fields:
+                  - label: "Photos (slideshow)"
+                    name: images
+                    widget: list
+                    label_singular: "Photo"
+                    summary: "{{fields.alt}}"
+                    fields:
+                      - { label: "Photo", name: src, widget: image }
+                      - { label: "Description", name: alt, widget: string }
+                  - { label: "Heading", name: heading, widget: string }
+                  - label: "Paragraphs"
+                    name: paras
+                    widget: list
+                    field: { label: "Paragraph", name: text, widget: text }
+              - { label: "Closing heading", name: joinHeading, widget: string }
+              - { label: "Closing paragraph", name: joinPara, widget: text }
+              - { label: "Button — label", name: joinButtonLabel, widget: string }
+              - { label: "Button — link", name: joinButtonHref, widget: string }
+
+          - label: "Service Schedule Section (intro text)"
+            name: schedule
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Liturgical heading", name: liturgicalHeading, widget: string }
+              - { label: "Education heading", name: educationHeading, widget: string }
+              - { label: "Note", name: note, widget: text }
+              - { label: "Button — label", name: calendarButtonLabel, widget: string }
+              - { label: "Button — link", name: calendarButtonHref, widget: string }
+
+          - label: "Calendar Section"
+            name: calendar
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Agenda view embed URL", name: agendaSrc, widget: string }
+              - { label: "Month view embed URL", name: monthSrc, widget: string }
+              - { label: "Button — label", name: fullButtonLabel, widget: string }
+              - { label: "Button — link", name: fullButtonHref, widget: string }
+
+          - label: "Mission Quote"
+            name: quote
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Quote text", name: text, widget: text, hint: "Curly quotation marks are added automatically." }
+              - { label: "Attribution", name: cite, widget: string }
+
+          - label: "Photo Gallery Section"
+            name: gallery
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Banner photo", name: panoImage, widget: image }
+              - { label: "Banner photo — description", name: panoAlt, widget: string }
+              - label: "Gallery photos"
+                name: images
+                widget: list
+                label_singular: "Photo"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Photo", name: src, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - { label: "Facebook button — label", name: fbButtonLabel, widget: string }
+              - { label: "Facebook button — link", name: fbButtonHref, widget: string }
+              - { label: "Facebook embed URL", name: fbEmbedSrc, widget: string }
+
+          - label: "History Section"
+            name: history
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - label: "Left column paragraphs"
+                name: colLeft
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+              - label: "Right column paragraphs"
+                name: colRight
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+              - label: "Historic photos (slideshow)"
+                name: images
+                widget: list
+                label_singular: "Photo"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Photo", name: src, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - label: "Slideshow caption paragraphs"
+                name: carouselParas
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+              - { label: "Facebook link — label", name: fbLabel, widget: string }
+              - { label: "Facebook link — URL", name: fbHref, widget: string }
+
+          - label: "Giving Section"
+            name: giving
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text, hint: "Basic HTML links are allowed." }
+              - { label: "Photo", name: panoImage, widget: image }
+              - { label: "Photo — description", name: panoAlt, widget: string }
+              - { label: "Photo caption", name: panoCaption, widget: string }
+              - { label: "One-time button — label", name: oneTimeLabel, widget: string }
+              - { label: "One-time button — link", name: oneTimeHref, widget: string }
+              - { label: "Recurring button — label", name: recurringLabel, widget: string }
+              - { label: "Recurring button — link", name: recurringHref, widget: string }
+              - { label: "Stewardship heading", name: stewardshipHeading, widget: string }
+              - label: "Stewardship paragraphs"
+                name: stewardshipParas
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+
+          - label: "Becoming Orthodox (Visit) Section"
+            name: visit
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - label: "Photos (slideshow)"
+                name: images
+                widget: list
+                label_singular: "Photo"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Photo", name: src, widget: image }
+                  - { label: "Description", name: alt, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                label_singular: "Step"
+                summary: "{{fields.heading}}"
+                collapsed: true
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - label: "Paragraphs"
+                    name: paras
+                    widget: list
+                    field: { label: "Paragraph", name: text, widget: text }
+              - { label: "Membership heading", name: memberHeading, widget: string }
+              - label: "Membership paragraphs"
+                name: memberParas
+                widget: list
+                field: { label: "Paragraph", name: text, widget: text }
+              - { label: "Membership button — label", name: memberButtonLabel, widget: string }
+              - { label: "Membership button — link", name: memberButtonHref, widget: string }
+
+          - label: "Ministries Section"
+            name: ministries
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Columns"
+                name: columns
+                widget: list
+                label_singular: "Column"
+                summary: "{{fields.title}}"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - label: "Rows"
+                    name: rows
+                    widget: list
+                    label_singular: "Entry"
+                    summary: "{{fields.role}} — {{fields.name}}"
+                    fields:
+                      - { label: "Role", name: role, widget: string }
+                      - { label: "Name(s)", name: name, widget: string }
+
+          - label: "Contact & Directions Section"
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Address", name: address, widget: text, hint: "Use <br> for line breaks." }
+              - { label: "Phone (display)", name: phone, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "e.g. tel:+14123311053" }
+              - { label: "Email", name: email, widget: string }
+              - { label: "Jurisdiction line", name: jurisdiction, widget: text, hint: "Basic HTML links are allowed." }
+              - label: "Driving directions"
+                name: directions
+                widget: list
+                label_singular: "Route"
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - { label: "Directions", name: body, widget: text }
+              - { label: "Map embed URL", name: mapSrc, widget: string }
+              - { label: "Directions button — label", name: directionsButtonLabel, widget: string }
+              - { label: "Directions button — link", name: directionsButtonHref, widget: string }
+              - { label: "Church photo", name: photoImage, widget: image }
+              - { label: "Church photo — description", name: photoAlt, widget: string }
+              - { label: "Church photo caption", name: photoCaption, widget: string }
+
+          - label: "Footer"
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Brand name", name: brand, widget: string }
+              - { label: "Address block", name: address, widget: text, hint: "Basic HTML is allowed." }
+              - label: "Social links"
+                name: socials
+                widget: list
+                label_singular: "Link"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "URL", name: href, widget: string }
+              - label: "Explore links"
+                name: exploreLinks
+                widget: list
+                label_singular: "Link"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
+              - label: "Connect links"
+                name: connectLinks
+                widget: list
+                label_singular: "Link"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
