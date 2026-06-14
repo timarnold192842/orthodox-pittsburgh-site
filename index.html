@@ -512,7 +512,7 @@
       </span>
       <img class="brand-icon" src="assets/st-nicholas-novgorod-1294.jpg" alt="" aria-hidden="true" />
     </a>
-    <nav class="menu" aria-label="Primary">
+    <nav class="menu" aria-label="Primary" data-cms-nav>
       <a href="#about">Parish</a>
       <a href="#faith">Worship</a>
       <a href="#schedule">Services</a>
@@ -534,14 +534,14 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-inner">
-        <p class="eyebrow">A Parish of the Orthodox Church in America</p>
-        <h1>St Nicholas Orthodox Church</h1>
-        <p class="lede">We strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.</p>
+        <p class="eyebrow" data-cms="hero.eyebrow">A Parish of the Orthodox Church in America</p>
+        <h1 data-cms="hero.title">St Nicholas Orthodox Church</h1>
+        <p class="lede" data-cms="hero.lede">We strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.</p>
         <div class="hero-actions">
-          <a class="btn gold" href="#schedule">Service Times</a>
-          <a class="btn ghost" href="#faith" style="color:#f7efe0;border-color:rgba(255,255,255,.3)">First-Time Visitor?</a>
+          <a class="btn gold" href="#schedule" data-cms="hero.primaryLabel" data-cms-href="hero.primaryHref">Service Times</a>
+          <a class="btn ghost" href="#faith" style="color:#f7efe0;border-color:rgba(255,255,255,.3)" data-cms="hero.secondaryLabel" data-cms-href="hero.secondaryHref">First-Time Visitor?</a>
         </div>
-        <div class="hero-meta">
+        <div class="hero-meta" data-cms-meta>
           <span><b>Established 1914</b> &middot; McKees Rocks, PA</span>
           <span>Sunday Divine Liturgy <b>10:00 am</b></span>
           <span>Saturday Great Vespers <b>5:00 pm</b></span>
@@ -713,7 +713,7 @@
     <div class="grid two">
       <div class="card">
         <h3>Our regular liturgical service times are:</h3>
-        <div class="schedule">
+        <div class="schedule" data-cms-list="scheduleLiturgical">
           <div class="srow"><div class="name">Saturday Great Vespers with Cathedral Vigil</div><div class="time">5:00 pm</div></div>
           <div class="srow"><div class="name">Sunday Divine Liturgy</div><div class="time">10:00 am</div></div>
           <div class="srow"><div class="name">Daily Matins every Tuesday and Thursday</div><div class="time">9:00 am</div></div>
@@ -728,7 +728,7 @@
 
       <div class="card">
         <h3>Our regular educational offering times are:</h3>
-        <div class="schedule">
+        <div class="schedule" data-cms-list="scheduleEducation">
           <div class="srow"><div class="name">Sunday Morning Adult Education on first and third Sundays</div><div class="time">9:15 am</div></div>
           <div class="srow"><div class="name">Sunday Church School at the end of Divine Liturgy</div><div class="time">&mdash;</div></div>
           <div class="srow"><div class="name">Bible Study on second and fourth Wednesdays</div><div class="time">7:00 pm</div></div>
@@ -876,7 +876,7 @@
       <h2>Our Leadership</h2>
     </div>
 
-    <div class="grid three">
+    <div class="grid three" data-cms-leadership>
       <div class="card person">
         <img class="person-photo" src="assets/fr-tom.jpg" loading="lazy" alt="Fr Thomas Soroka, Rector of St Nicholas Orthodox Church." />
         <div class="role">Rector</div>
@@ -1305,6 +1305,73 @@
     show(0);
     reset();
   });
+
+  // ---------- CMS hydration ----------
+  // Render editable content from content.json. The HTML above is an exact
+  // fallback, so if this file is missing or JS is disabled the page still
+  // shows correct content (no flash, no blank regions).
+  (function () {
+    function get(obj, path) {
+      return path.split('.').reduce(function (o, k) { return o == null ? undefined : o[k]; }, obj);
+    }
+    function esc(s) { return String(s == null ? '' : s); }
+
+    function apply(data) {
+      // Simple text/HTML nodes + optional href
+      document.querySelectorAll('[data-cms]').forEach(function (el) {
+        var v = get(data, el.getAttribute('data-cms'));
+        if (v != null) el.innerHTML = v;
+        var hp = el.getAttribute('data-cms-href');
+        if (hp) { var hv = get(data, hp); if (hv != null) el.setAttribute('href', hv); }
+      });
+
+      // Hero meta lines
+      var meta = document.querySelector('[data-cms-meta]');
+      if (meta && data.hero && Array.isArray(data.hero.meta)) {
+        meta.innerHTML = data.hero.meta.map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('');
+      }
+
+      // Primary navigation
+      var nav = document.querySelector('[data-cms-nav]');
+      if (nav && Array.isArray(data.nav)) {
+        nav.innerHTML = data.nav.map(function (n) {
+          return '<a href="' + esc(n.href) + '">' + esc(n.label) + '</a>';
+        }).join('');
+      }
+
+      // Schedule tables
+      document.querySelectorAll('[data-cms-list]').forEach(function (box) {
+        var rows = get(data, box.getAttribute('data-cms-list'));
+        if (!Array.isArray(rows)) return;
+        box.innerHTML = rows.map(function (r) {
+          return '<div class="srow"><div class="name">' + esc(r.name) +
+                 '</div><div class="time">' + esc(r.time) + '</div></div>';
+        }).join('');
+      });
+
+      // Leadership cards
+      var grid = document.querySelector('[data-cms-leadership]');
+      if (grid && Array.isArray(data.leadership)) {
+        grid.innerHTML = data.leadership.map(function (p) {
+          var email = p.email
+            ? '<a class="email" href="mailto:' + esc(p.email) + '">' + esc(p.email) + '</a>'
+            : '';
+          return '<div class="card person">' +
+            '<img class="person-photo" src="' + esc(p.photo) + '" loading="lazy" alt="' + esc(p.name) + '" />' +
+            '<div class="role">' + esc(p.role) + '</div>' +
+            '<h3>' + esc(p.name) + '</h3>' +
+            email +
+            '<p>' + esc(p.bio) + '</p>' +
+          '</div>';
+        }).join('');
+      }
+    }
+
+    fetch('content.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) { if (data) apply(data); })
+      .catch(function () { /* keep hardcoded fallback */ });
+  })();
 </script>
 </body>
 </html>

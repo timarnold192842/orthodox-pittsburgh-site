@@ -1,0 +1,83 @@
+backend:
+  name: github
+  repo: timarnold192842/orthodox-pittsburgh-site
+  branch: main
+
+# Lets you edit locally with `npx decap-server` (no login needed) before
+# wiring up remote logins. Set to false / remove for production-only use.
+local_backend: true
+
+# Uploaded photos go into the assets/ folder and are referenced relatively
+# (the site is served from a sub-path on GitHub Pages).
+media_folder: "assets"
+public_folder: "assets"
+
+site_url: https://timarnold192842.github.io/orthodox-pittsburgh-site/
+display_url: https://timarnold192842.github.io/orthodox-pittsburgh-site/
+
+collections:
+  - name: content
+    label: "Site Content"
+    delete: false
+    files:
+      - name: homepage
+        label: "Homepage"
+        file: "content.json"
+        format: json
+        description: "Edit the parish homepage. Changes publish automatically after saving."
+        fields:
+          - label: "Navigation Menu"
+            name: nav
+            widget: list
+            label_singular: "Menu item"
+            summary: "{{fields.label}} → {{fields.href}}"
+            fields:
+              - { label: "Label", name: label, widget: string }
+              - { label: "Link", name: href, widget: string, hint: "An anchor like #about, or a full https:// URL" }
+
+          - label: "Hero (Top Banner)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow (small line above title)", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Intro paragraph", name: lede, widget: text }
+              - { label: "Primary button — label", name: primaryLabel, widget: string }
+              - { label: "Primary button — link", name: primaryHref, widget: string }
+              - { label: "Secondary button — label", name: secondaryLabel, widget: string }
+              - { label: "Secondary button — link", name: secondaryHref, widget: string }
+              - label: "Meta lines (under the buttons)"
+                name: meta
+                widget: list
+                hint: "Short facts. Basic HTML like <b>bold</b> is allowed."
+                field: { label: "Line", name: line, widget: string }
+
+          - label: "Service Schedule — Liturgical"
+            name: scheduleLiturgical
+            widget: list
+            label_singular: "Service"
+            summary: "{{fields.name}} — {{fields.time}}"
+            fields:
+              - { label: "Service", name: name, widget: string, hint: "Basic HTML like <small>(note)</small> is allowed." }
+              - { label: "Time", name: time, widget: string }
+
+          - label: "Service Schedule — Education"
+            name: scheduleEducation
+            widget: list
+            label_singular: "Offering"
+            summary: "{{fields.name}} — {{fields.time}}"
+            fields:
+              - { label: "Offering", name: name, widget: string }
+              - { label: "Time", name: time, widget: string }
+
+          - label: "Leadership"
+            name: leadership
+            widget: list
+            label_singular: "Person"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Photo", name: photo, widget: image }
+              - { label: "Role", name: role, widget: string }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Email", name: email, widget: string, required: false }
+              - { label: "Biography", name: bio, widget: text }
