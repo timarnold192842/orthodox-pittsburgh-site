@@ -196,6 +196,31 @@
   }
   .hc-icon img { object-fit: contain; border-radius: 4px; }
 
+  /* Hero variant: full-bleed background image (e.g. the vigil), no collage */
+  .hero-banner {
+    background-color: #181109;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: clamp(520px, 72vh, 760px);
+    display: flex;
+    align-items: center;
+  }
+  .hero-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(105deg, rgba(15,10,5,.88) 0%, rgba(20,14,8,.66) 46%, rgba(20,14,8,.30) 100%);
+  }
+  .hero-banner .wrap { width: 100%; padding-top: 90px; padding-bottom: 90px; }
+  .hero-banner .hero-inner { max-width: 660px; }
+  .hero-banner .hero-actions .btn.ghost {
+    background: rgba(20,14,8,.40);
+    border-color: rgba(255,255,255,.6) !important;
+  }
+  .hero-banner .hero-actions .btn.ghost:hover { background: rgba(20,14,8,.62); }
+
   /* Patron icon figure (relocated from hero) */
   .icon-figure { margin: 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
   .icon-frame {
@@ -530,7 +555,7 @@
 </header>
 
 <!-- ====================== HERO ====================== -->
-<section class="hero" id="top">
+<section class="hero" id="top" data-cms-show="hero.collageVisible">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-inner">
@@ -560,6 +585,28 @@
           <img src="assets/st-nicholas-novgorod-1294.jpg" width="1400" height="1941" loading="lazy"
                alt="Icon of St Nicholas the Wonderworker, Archbishop of Myra, painted in Novgorod, 1294." />
         </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== HERO (BANNER VARIANT) ====================== -->
+<section class="hero hero-banner" id="top-banner"
+         style="background-image:url('assets/church-aerial.png')"
+         data-cms-show="hero.bannerVisible" data-cms-bg="hero.bannerImage">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow" data-cms="hero.eyebrow">A Parish of the Orthodox Church in America</p>
+      <h1 data-cms="hero.title">St Nicholas Orthodox Church</h1>
+      <p class="lede" data-cms="hero.lede">We strive to glorify God through Orthodox Christian worship, sincere love and care for one another, and service to those in need around us.</p>
+      <div class="hero-actions">
+        <a class="btn gold" href="#schedule" data-cms="hero.primaryLabel" data-cms-href="hero.primaryHref">Service Times</a>
+        <a class="btn ghost" href="#faith" style="color:#f7efe0;border-color:rgba(255,255,255,.3)" data-cms="hero.secondaryLabel" data-cms-href="hero.secondaryHref">First-Time Visitor?</a>
+      </div>
+      <div class="hero-meta" data-cms-meta>
+        <span><b>Established 1914</b> &middot; McKees Rocks, PA</span>
+        <span>Sunday Divine Liturgy <b>10:00 am</b></span>
+        <span>Saturday Great Vespers <b>5:00 pm</b></span>
       </div>
     </div>
   </div>
@@ -1374,11 +1421,25 @@
         if (v != null) el.setAttribute('alt', v);
       });
 
-      // Hero meta lines
-      var meta = document.querySelector('[data-cms-meta]');
-      if (meta && data.hero && Array.isArray(data.hero.meta)) {
-        meta.innerHTML = data.hero.meta.map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('');
-      }
+      // Background images (set on the element's style)
+      document.querySelectorAll('[data-cms-bg]').forEach(function (el) {
+        var v = get(data, el.getAttribute('data-cms-bg'));
+        if (v) el.style.backgroundImage = "url('" + esc(v) + "')";
+      });
+
+      // Show / hide whole regions (true = shown). Anything other than an
+      // explicit false keeps the element visible.
+      document.querySelectorAll('[data-cms-show]').forEach(function (el) {
+        var v = get(data, el.getAttribute('data-cms-show'));
+        el.style.display = (v === false) ? 'none' : '';
+      });
+
+      // Hero meta lines (may appear in more than one hero variant)
+      document.querySelectorAll('[data-cms-meta]').forEach(function (meta) {
+        if (data.hero && Array.isArray(data.hero.meta)) {
+          meta.innerHTML = data.hero.meta.map(function (m) { return '<span>' + esc(m) + '</span>'; }).join('');
+        }
+      });
 
       // Primary navigation
       var nav = document.querySelector('[data-cms-nav]');

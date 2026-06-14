@@ -51,6 +51,9 @@ collections:
                 widget: list
                 hint: "Short facts. Basic HTML like <b>bold</b> is allowed."
                 field: { label: "Line", name: line, widget: string }
+              - { label: "Show collage hero (exterior + vigil + icon)", name: collageVisible, widget: boolean, default: true }
+              - { label: "Show banner hero (full-bleed background image)", name: bannerVisible, widget: boolean, default: true }
+              - { label: "Banner hero background image", name: bannerImage, widget: image, hint: "Used by the full-bleed banner hero." }
 
           - label: "Service Schedule — Liturgical"
             name: scheduleLiturgical

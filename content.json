@@ -45,7 +45,10 @@
       "<b>Established 1914</b> &middot; McKees Rocks, PA",
       "Sunday Divine Liturgy <b>10:00 am</b>",
       "Saturday Great Vespers <b>5:00 pm</b>"
-    ]
+    ],
+    "collageVisible": true,
+    "bannerVisible": true,
+    "bannerImage": "assets/church-aerial.png"
   },
   "scheduleLiturgical": [
     {
